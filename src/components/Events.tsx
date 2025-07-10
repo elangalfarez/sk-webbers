@@ -26,7 +26,7 @@ const Events = () => {
     {
       id: 3,
       title: "Gramedia Big Sale",
-      date: "July 2025",
+      date: "1 - 27 July 2025",
       time: "10:00 AM - 10:00 PM",
       location: "First Floor, East Dome",
       description: "Stationery and book supplies at 70% discount",
