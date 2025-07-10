@@ -24,7 +24,7 @@ const FeaturedTenants = () => {
     {
       name: "Steak 21",
       category: "Food & Beverages",
-      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/hm-sk.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-15.38.57_e59ecc65-scaled.jpgixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
