@@ -11,37 +11,37 @@ const FeaturedTenants = () => {
     },
     {
       name: "M&G Life",
-      category: "Coffee & Beverages",
+      category: "Entertainment",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/06/SnapInsta.to_502247740_18516494998054941_6968524714097791824_n.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
       name: "Top Toy",
-      category: "Casual Wear",
+      category: "Entertainment",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/toppers-toy.jpg",
       featured: true
     },
     {
       name: "Steak 21",
-      category: "Fashion Forward",
+      category: "Food & Beverages",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/hm-sk.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
       name: "Diamond & Co",
-      category: "Family Dining",
+      category: "Jewellry & Watches",
       image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
       name: "Queensland",
-      category: "Beauty & Cosmetics",
+      category: "Fashion & Lifestyle",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2022/12/ohsome.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
       name: "Celcius",
-      category: "Home & Garden",
+      category: "Fashion & Lifestyle",
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: false
     }
