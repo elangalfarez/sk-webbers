@@ -68,7 +68,7 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden">
       {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-dark-gray to-black"></div>
+      <div className="absolute inset-0 bg-primary"></div>
       
       {/* Background pattern overlay */}
       <div className="absolute inset-0 opacity-10">
@@ -180,7 +180,7 @@ const Footer = () => {
               <button
                 type="submit"
                 disabled={isSubmitted}
-                className="px-6 py-3 bg-gradient-to-r from-primary to-gold text-white font-semibold rounded-lg hover:from-gray-800 hover:to-yellow-600 focus:outline-none focus:ring-2 focus:ring-gold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-3 bg-gold text-primary font-semibold rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-gold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitted ? 'Subscribed!' : 'Subscribe'}
               </button>

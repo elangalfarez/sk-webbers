@@ -11,18 +11,18 @@ const Hero = () => {
           alt="Supermal Karawaci Interior"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Welcome to <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-400">Supermal Karawaci</span>
+          Welcome to <br/> <span className="text-gold">Supermal Karawaci</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
           Your Shopping, Culinary, & Entertainment Destination
         </p>
-        <button className="inline-flex items-center px-8 py-4 gradient-card text-white font-semibold rounded-full hover:shadow-2xl transform hover:scale-105 transition-all duration-300 shadow-lg">
+        <button className="inline-flex items-center px-8 py-4 bg-primary border border-gold text-white font-semibold rounded-full hover:bg-dark-gray hover:shadow-2xl transform hover:scale-105 transition-all duration-300 shadow-lg">
           See What's On
           <ChevronRight className="ml-2 h-5 w-5" />
         </button>

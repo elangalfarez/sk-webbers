@@ -40,7 +40,7 @@ const Events = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            Current <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Events</span>
+            Current <span className="text-gold">Events</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Don't miss out on our exciting events and exclusive promotions
@@ -85,7 +85,7 @@ const Events = () => {
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">{event.description}</p>
                 
                 <div className="mt-auto">
-                  <button className="w-full flex items-center justify-center py-3 gradient-card text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 group">
+                  <button className="w-full flex items-center justify-center py-3 bg-primary border border-gold text-white rounded-lg font-semibold hover:bg-dark-gray hover:shadow-lg transition-all duration-300 group">
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>

@@ -52,7 +52,7 @@ const FeaturedTenants = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            New <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Tenants</span>
+            New <span className="text-gold">Tenants</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Discover new tenants at Supermal Karawaci

@@ -57,7 +57,7 @@ const VisitorInfo = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            Visitor <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Information</span>
+            Visitor <span className="text-gold">Information</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Everything you need to know for a perfect visit
@@ -86,7 +86,7 @@ const VisitorInfo = () => {
               </div>
               
               {item.action && (
-                <button className="w-full py-3 gradient-card text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                <button className="w-full py-3 bg-primary border border-gold text-white rounded-lg font-semibold hover:bg-dark-gray hover:shadow-lg transition-all duration-300">
                   {item.action}
                 </button>
               )}

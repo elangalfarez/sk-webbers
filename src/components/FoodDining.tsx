@@ -52,7 +52,7 @@ const FoodDining = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            Food & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Dining</span>
+            Food & <span className="text-gold">Dining</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             From street snacks to fine dining - savor the best flavors all in one place
@@ -88,7 +88,7 @@ const FoodDining = () => {
                   <span className="text-sm">{restaurant.category}</span>
                 </div>
                 
-                <button className="w-full py-3 gradient-card text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                <button className="w-full py-3 bg-primary border border-gold text-white rounded-lg font-semibold hover:bg-dark-gray hover:shadow-lg transition-all duration-300">
                   View Menu
                 </button>
               </div>
@@ -97,7 +97,7 @@ const FoodDining = () => {
         </div>
         
         <div className="text-center mt-12">
-          <button className="px-8 py-4 gradient-card text-white font-semibold rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 shadow-lg">
+          <button className="px-8 py-4 bg-primary border border-gold text-white font-semibold rounded-full hover:bg-dark-gray hover:shadow-xl transform hover:scale-105 transition-all duration-300 shadow-lg">
             Explore All Restaurants
           </button>
         </div>
