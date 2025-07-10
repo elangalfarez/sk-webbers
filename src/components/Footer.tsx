@@ -80,7 +80,7 @@ const Footer = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -142,9 +142,9 @@ const Footer = () => {
           </div>
           
           {/* Services Grid */}
-          <div className="lg:col-span-2">
+          <div className="md:col-span-2 lg:col-span-2">
             <h4 className="text-lg font-semibold text-gold mb-6">Our Services</h4>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {services.map((service) => (
                 <div key={service.name} className="flex items-start space-x-3 p-3 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
                   <div className="p-2 bg-gold/20 rounded-lg">
@@ -161,26 +161,26 @@ const Footer = () => {
         </div>
         
         {/* Newsletter Section */}
-        <div className="border-t border-white/10 pt-12 mb-12">
+        <div className="border-t border-white/10 pt-8 md:pt-12 mb-8 md:mb-12">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Stay Connected</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Stay Connected</h3>
             <p className="text-blue-200">Subscribe to our newsletter for exclusive offers, events, and updates</p>
           </div>
           
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all"
+                className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
                 required
               />
               <button
                 type="submit"
                 disabled={isSubmitted}
-                className="px-6 py-3 bg-gold text-primary font-semibold rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-gold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-3 bg-gold text-primary font-semibold rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-gold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
               >
                 {isSubmitted ? 'Subscribed!' : 'Subscribe'}
               </button>
@@ -189,10 +189,10 @@ const Footer = () => {
         </div>
         
         {/* Bottom Section */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
+        <div className="border-t border-white/10 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4 md:mb-0 text-center sm:text-left">
             <p className="text-blue-200 text-sm">© 2025 Supermal Karawaci. All rights reserved.</p>
-            <div className="flex space-x-4 text-sm">
+            <div className="flex flex-wrap justify-center sm:justify-start space-x-4 text-sm">
               <a href="#" className="text-blue-200 hover:text-white transition-colors">Privacy Policy</a>
               <span className="text-blue-300">•</span>
               <a href="#" className="text-blue-200 hover:text-white transition-colors">Terms of Service</a>
@@ -201,7 +201,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-1 mt-4 md:mt-0">
             <span className="text-blue-200 text-sm mr-3">Follow us:</span>
             {socialLinks.map((social) => (
               <a

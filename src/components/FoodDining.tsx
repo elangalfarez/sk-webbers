@@ -48,18 +48,18 @@ const FoodDining = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Food & <span className="text-gold">Dining</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             From street snacks to fine dining - savor the best flavors all in one place
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {restaurants.map((restaurant, index) => (
             <div
               key={index}
@@ -69,7 +69,7 @@ const FoodDining = () => {
                 <img 
                   src={restaurant.image}
                   alt={restaurant.name}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-40 md:h-48 object-cover"
                 />
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center">
                   <Star className="w-4 h-4 text-yellow-400 mr-1" />
@@ -77,9 +77,9 @@ const FoodDining = () => {
                 </div>
               </div>
               
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-primary">{restaurant.name}</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-primary">{restaurant.name}</h3>
                   <span className="text-green-600 font-semibold">{restaurant.priceRange}</span>
                 </div>
                 
@@ -97,7 +97,7 @@ const FoodDining = () => {
         </div>
         
         <div className="text-center mt-12">
-          <button className="px-8 py-4 bg-primary border border-gold text-white font-semibold rounded-full hover:bg-dark-gray hover:shadow-xl transform hover:scale-105 transition-all duration-300 shadow-lg">
+          <button className="px-6 md:px-8 py-3 md:py-4 bg-primary border border-gold text-white font-semibold rounded-full hover:bg-dark-gray hover:shadow-xl transform hover:scale-105 transition-all duration-300 shadow-lg text-sm md:text-base">
             Explore All Restaurants
           </button>
         </div>

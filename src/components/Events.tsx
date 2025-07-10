@@ -36,18 +36,18 @@ const Events = () => {
   ];
 
   return (
-    <section className="py-20 bg-light-gray">
+    <section className="py-12 md:py-20 bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Current <span className="text-gold">Events</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Don't miss out on our exciting events and exclusive promotions
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {events.map((event) => (
             <div
               key={event.id}
@@ -57,15 +57,15 @@ const Events = () => {
                 <img 
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-40 md:h-48 object-cover"
                 />
                 <div className="absolute top-4 left-4 bg-gold text-primary px-3 py-1 rounded-full text-sm font-semibold">
                   {event.category}
                 </div>
               </div>
               
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-primary mb-3">{event.title}</h3>
+              <div className="p-4 md:p-6 flex flex-col flex-grow">
+                <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{event.title}</h3>
                 
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center text-gray-600">

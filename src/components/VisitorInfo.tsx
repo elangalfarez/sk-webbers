@@ -53,22 +53,22 @@ const VisitorInfo = () => {
   ];
 
   return (
-    <section className="py-20 bg-light-gray">
+    <section className="py-12 md:py-20 bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Visitor <span className="text-gold">Information</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Everything you need to know for a perfect visit
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {infoItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+              className="bg-white rounded-2xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gold/20 rounded-full group-hover:bg-gold/30 transition-colors">
@@ -77,7 +77,7 @@ const VisitorInfo = () => {
                 <h3 className="text-xl font-bold text-primary ml-4">{item.title}</h3>
               </div>
               
-              <div className="space-y-2 mb-6">
+              <div className="space-y-2 mb-4 md:mb-6">
                 {item.details.map((detail, detailIndex) => (
                   <p key={detailIndex} className="text-gray-600 text-sm leading-relaxed">
                     {detail}
@@ -95,9 +95,9 @@ const VisitorInfo = () => {
         </div>
         
         {/* Contact Information */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-primary mb-6 text-center">Contact Information</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+          <h3 className="text-xl md:text-2xl font-bold text-primary mb-6 text-center">Contact Information</h3>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {contactInfo.map((contact, index) => (
               <a
                 key={index}
