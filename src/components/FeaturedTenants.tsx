@@ -43,7 +43,7 @@ const FeaturedTenants = () => {
       name: "Celcius",
       category: "Fashion & Lifestyle",
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      featured: false
+      featured: true
     }
   ];
 
