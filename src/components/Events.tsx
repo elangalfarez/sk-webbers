@@ -36,10 +36,10 @@ const Events = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Current <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Events</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -59,25 +59,25 @@ const Events = () => {
                   alt={event.title}
                   className="w-full h-48 object-cover"
                 />
-                <div className="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 left-4 bg-gold text-primary px-3 py-1 rounded-full text-sm font-semibold">
                   {event.category}
                 </div>
               </div>
               
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{event.title}</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">{event.title}</h3>
                 
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center text-gray-600">
-                    <Calendar className="w-4 h-4 mr-2 text-primary" />
+                    <Calendar className="w-4 h-4 mr-2 text-gold" />
                     <span className="text-sm">{event.date}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <Clock className="w-4 h-4 mr-2 text-primary" />
+                    <Clock className="w-4 h-4 mr-2 text-gold" />
                     <span className="text-sm">{event.time}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2 text-primary" />
+                    <MapPin className="w-4 h-4 mr-2 text-gold" />
                     <span className="text-sm">{event.location}</span>
                   </div>
                 </div>

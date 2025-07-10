@@ -53,10 +53,10 @@ const VisitorInfo = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Visitor <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Information</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -71,10 +71,10 @@ const VisitorInfo = () => {
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-amber-100 rounded-full group-hover:bg-amber-200 transition-colors">
+                <div className="p-3 bg-gold/20 rounded-full group-hover:bg-gold/30 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 ml-4">{item.title}</h3>
+                <h3 className="text-xl font-bold text-primary ml-4">{item.title}</h3>
               </div>
               
               <div className="space-y-2 mb-6">
@@ -96,7 +96,7 @@ const VisitorInfo = () => {
         
         {/* Contact Information */}
         <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Contact Information</h3>
+          <h3 className="text-2xl font-bold text-primary mb-6 text-center">Contact Information</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {contactInfo.map((contact, index) => (
               <a
@@ -104,11 +104,11 @@ const VisitorInfo = () => {
                 href={contact.href}
                 className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group"
               >
-                <div className="p-2 bg-amber-100 rounded-full group-hover:bg-amber-200 transition-colors">
+                <div className="p-2 bg-gold/20 rounded-full group-hover:bg-gold/30 transition-colors">
                   <contact.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm font-semibold text-gray-900">{contact.label}</p>
+                  <p className="text-sm font-semibold text-primary">{contact.label}</p>
                   <p className="text-sm text-gray-600">{contact.value}</p>
                 </div>
               </a>

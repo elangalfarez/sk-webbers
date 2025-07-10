@@ -6,7 +6,15 @@
 
 @layer utilities {
   .gradient-card {
-    background: linear-gradient(115deg, #121421 0%, #F59E0B 100%);
+    background: linear-gradient(115deg, #121421 0%, #D4AF37 100%);
+  }
+  
+  .gradient-gold {
+    background: linear-gradient(115deg, #D4AF37 0%, #F59E0B 100%);
+  }
+  
+  .bg-luxury {
+    background: linear-gradient(135deg, #121421 0%, #1F2937 100%);
   }
   
   .scrollbar-hide::-webkit-scrollbar {

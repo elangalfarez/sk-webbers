@@ -51,7 +51,7 @@ const FeaturedTenants = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             New <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Tenants</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -74,13 +74,14 @@ const FeaturedTenants = () => {
                   />
                   {tenant.featured && (
                     <div className="absolute top-4 right-4 bg-amber-400 text-black px-2 py-1 rounded-full text-sm font-semibold flex items-center">
+                    <div className="absolute top-4 right-4 bg-gold text-primary px-2 py-1 rounded-full text-sm font-semibold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
                       Now Open!
                     </div>
                   )}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{tenant.name}</h3>
+                  <h3 className="text-xl font-bold text-primary mb-2">{tenant.name}</h3>
                   <p className="text-gray-600 mb-4">{tenant.category}</p>
                 </div>
               </div>

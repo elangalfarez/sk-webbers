@@ -68,14 +68,14 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden">
       {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-primary"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-dark-gray to-black"></div>
       
       {/* Background pattern overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-48 -translate-y-48"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-48 translate-y-48"></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-purple-400 rounded-full -translate-x-32 -translate-y-32"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-amber-400 rounded-full -translate-x-32 -translate-y-32"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gold rounded-full -translate-x-32 -translate-y-32"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -98,7 +98,7 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-start text-blue-200">
-                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-amber-400" />
+                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-gold" />
                 <div className="text-sm">
                   <p className="font-medium text-white">Supermal Karawaci</p>
                   <p>Jl. Boulevard Diponegoro No.105</p>
@@ -107,21 +107,21 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center text-blue-200">
-                <Phone className="w-4 h-4 mr-3 flex-shrink-0 text-amber-400" />
+                <Phone className="w-4 h-4 mr-3 flex-shrink-0 text-gold" />
                 <a href="tel:+62215460123" className="text-sm hover:text-white transition-colors">
                   (021) 546-0123
                 </a>
               </div>
               
               <div className="flex items-center text-blue-200">
-                <Mail className="w-4 h-4 mr-3 flex-shrink-0 text-amber-400" />
+                <Mail className="w-4 h-4 mr-3 flex-shrink-0 text-gold" />
                 <a href="mailto:contact.us@supermalkarawaci.com" className="text-sm hover:text-white transition-colors">
                   contact.us@supermalkarawaci.com
                 </a>
               </div>
               
               <div className="flex items-center text-blue-200">
-                <Clock className="w-4 h-4 mr-3 flex-shrink-0 text-amber-400" />
+                <Clock className="w-4 h-4 mr-3 flex-shrink-0 text-gold" />
                 <span className="text-sm">Daily 10:00 - 22:00</span>
               </div>
             </div>
@@ -129,7 +129,7 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-amber-300 mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-gold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -143,12 +143,12 @@ const Footer = () => {
           
           {/* Services Grid */}
           <div className="lg:col-span-2">
-            <h4 className="text-lg font-semibold text-amber-300 mb-6">Our Services</h4>
+            <h4 className="text-lg font-semibold text-gold mb-6">Our Services</h4>
             <div className="grid grid-cols-2 gap-4">
               {services.map((service) => (
                 <div key={service.name} className="flex items-start space-x-3 p-3 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
-                  <div className="p-2 bg-amber-500/20 rounded-lg">
-                    <service.icon className="w-5 h-5 text-amber-300" />
+                  <div className="p-2 bg-gold/20 rounded-lg">
+                    <service.icon className="w-5 h-5 text-gold" />
                   </div>
                   <div>
                     <h5 className="text-white font-medium text-sm">{service.name}</h5>
@@ -180,7 +180,7 @@ const Footer = () => {
               <button
                 type="submit"
                 disabled={isSubmitted}
-                className="px-6 py-3 bg-gradient-to-r from-primary to-amber-500 text-white font-semibold rounded-lg hover:from-gray-800 hover:to-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-3 bg-gradient-to-r from-primary to-gold text-white font-semibold rounded-lg hover:from-gray-800 hover:to-yellow-600 focus:outline-none focus:ring-2 focus:ring-gold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitted ? 'Subscribed!' : 'Subscribe'}
               </button>

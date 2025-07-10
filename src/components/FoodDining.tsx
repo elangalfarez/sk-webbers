@@ -51,7 +51,7 @@ const FoodDining = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Food & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Dining</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -79,12 +79,12 @@ const FoodDining = () => {
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-gray-900">{restaurant.name}</h3>
+                  <h3 className="text-xl font-bold text-primary">{restaurant.name}</h3>
                   <span className="text-green-600 font-semibold">{restaurant.priceRange}</span>
                 </div>
                 
                 <div className="flex items-center text-gray-600 mb-4">
-                  <Utensils className="w-4 h-4 mr-2 text-amber-500" />
+                  <Utensils className="w-4 h-4 mr-2 text-gold" />
                   <span className="text-sm">{restaurant.category}</span>
                 </div>
                 

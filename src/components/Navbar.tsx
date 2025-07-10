@@ -140,8 +140,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20'
-          : 'bg-white shadow-sm'
+          ? 'bg-primary/95 backdrop-blur-md shadow-lg border-b border-gold/20'
+          : 'bg-primary shadow-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,7 +164,7 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-primary transition-colors duration-200"
+              className="text-white hover:text-gold transition-colors duration-200"
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -181,7 +181,7 @@ const Navbar = () => {
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="py-4 space-y-2 border-t border-gray-200/50">
+          <div className="py-4 space-y-2 border-t border-gold/20">
             {mobileMenuItems.map((item) => (
               <div key={item.name}>
                 {item.submenu ? (
@@ -189,7 +189,7 @@ const Navbar = () => {
                     <button
                       onClick={() => handleDropdownToggle(item.name)}
                       className="flex items-center justify-between w-full text-left px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors duration-200 rounded-lg"
-                      className="flex items-center justify-between w-full text-left px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-primary transition-colors duration-200 rounded-lg"
+                      className="flex items-center justify-between w-full text-left px-4 py-2 text-white hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
                     >
                       {item.name}
                       <ChevronDown
@@ -211,7 +211,7 @@ const Navbar = () => {
                         <a
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-600 hover:bg-amber-50 hover:text-primary transition-colors duration-200 rounded-lg"
+                          className="block px-4 py-2 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
                         >
                           {subItem.name}
                         </a>
@@ -221,7 +221,7 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-primary transition-colors duration-200 rounded-lg"
+                    className="block px-4 py-2 text-white hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
                   >
                     {item.name}
                   </a>

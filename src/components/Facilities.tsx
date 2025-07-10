@@ -110,7 +110,7 @@ const Facilities = () => {
       href: "#",
       cta: "Connect Now",
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-amber-500/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-gold/30" />
       ),
       className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
     },
@@ -121,7 +121,7 @@ const Facilities = () => {
       href: "#",
       cta: "Find Location",
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-yellow-500/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gold/30 to-yellow-500/30" />
       ),
       className: "lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-4",
     },
@@ -132,7 +132,7 @@ const Facilities = () => {
       href: "#",
       cta: "Get Help",
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-amber-600/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-gold/30" />
       ),
       className: "lg:col-start-3 lg:col-end-4 lg:row-start-3 lg:row-end-4",
     },
@@ -142,7 +142,7 @@ const Facilities = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Facilities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
