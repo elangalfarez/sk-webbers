@@ -34,9 +34,9 @@ const FeaturedTenants = () => {
       featured: true
     },
     {
-      name: "Queensland",
-      category: "Fashion & Lifestyle",
-      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2022/12/ohsome.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      name: "Nanyang Dashifu",
+      category: "Food & Beverages",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-15.39.08_dbd8bf23-scaled.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
