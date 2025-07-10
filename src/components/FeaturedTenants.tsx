@@ -55,7 +55,7 @@ const FeaturedTenants = () => {
             New <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Tenants</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover premium brands and local favorites all under one roof
+            Discover new tenants at Supermal Karawaci
           </p>
         </div>
         
