@@ -75,7 +75,7 @@ const FeaturedTenants = () => {
                   {tenant.featured && (
                     <div className="absolute top-4 right-4 bg-yellow-400 text-black px-2 py-1 rounded-full text-sm font-semibold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
-                      Featured
+                      Now Open!
                     </div>
                   )}
                 </div>
