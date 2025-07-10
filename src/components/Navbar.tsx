@@ -149,7 +149,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img
-              src="/LOGO SK WITHOUT BORDER 1.png"
+              src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/LOGO-SK-Tulisan-Putih-scaled.png"
               alt="Supermal Karawaci"
               className="h-12 w-auto mr-3"
             />
