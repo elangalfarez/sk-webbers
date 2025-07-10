@@ -30,7 +30,7 @@ const FeaturedTenants = () => {
     {
       name: "Diamond & Co",
       category: "Jewellry & Watches",
-      image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-15.39.05_fc5e7514-scaled.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
