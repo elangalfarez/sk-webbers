@@ -85,7 +85,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
               <img
-                src="/LOGO SK WITHOUT BORDER 1.png"
+                src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/LOGO-SK-Tulisan-Putih-scaled.png"
                 alt="Supermal Karawaci"
                 className="h-12 w-auto mr-3"
               />
