@@ -20,11 +20,14 @@ const Facilities = () => {
       href: "#",
       cta: "Explore Stores",
       background: (
-        <img 
-          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-          alt="Shopping Area"
-          className="absolute inset-0 w-full h-full object-cover opacity-60" 
-        />
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            alt="Shopping Area"
+            className="w-full h-full object-cover opacity-30" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
       ),
       className: "lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-2",
     },
@@ -35,11 +38,14 @@ const Facilities = () => {
       href: "#",
       cta: "View Rates",
       background: (
-        <img 
-          src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/images.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-          alt="Parking"
-          className="absolute inset-0 w-full h-full object-cover opacity-60" 
-        />
+        <div className="absolute inset-0">
+          <img 
+            src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/images.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            alt="Parking"
+            className="w-full h-full object-cover opacity-30" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
       ),
       className: "lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2",
     },
@@ -50,11 +56,14 @@ const Facilities = () => {
       href: "#",
       cta: "See Restaurants",
       background: (
-        <img 
-          src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/karawaci-supermall-food-court-corner-area-simple-tangerang-indonesia-july-karawaci-supermall-food-court-corner-area-327678437.webp?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-          alt="Food Court"
-          className="absolute inset-0 w-full h-full object-cover opacity-60" 
-        />
+        <div className="absolute inset-0">
+          <img 
+            src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/karawaci-supermall-food-court-corner-area-simple-tangerang-indonesia-july-karawaci-supermall-food-court-corner-area-327678437.webp?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            alt="Food Court"
+            className="w-full h-full object-cover opacity-30" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
       ),
       className: "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2",
     },
@@ -65,11 +74,14 @@ const Facilities = () => {
       href: "#",
       cta: "Learn More",
       background: (
-        <img 
-          src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-          alt="Kids Area"
-          className="absolute inset-0 w-full h-full object-cover opacity-60" 
-        />
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            alt="Kids Area"
+            className="w-full h-full object-cover opacity-30" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
       ),
       className: "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3",
     },
@@ -80,11 +92,14 @@ const Facilities = () => {
       href: "#",
       cta: "Check Showtimes",
       background: (
-        <img 
-          src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/supermal-karawaci-xxi-tangerang_430x280.webp?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-          alt="Cinema"
-          className="absolute inset-0 w-full h-full object-cover opacity-60" 
-        />
+        <div className="absolute inset-0">
+          <img 
+            src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/supermal-karawaci-xxi-tangerang_430x280.webp?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            alt="Cinema"
+            className="w-full h-full object-cover opacity-30" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
       ),
       className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3",
     },
@@ -95,7 +110,7 @@ const Facilities = () => {
       href: "#",
       cta: "Connect Now",
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-600/30" />
       ),
       className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
     },
@@ -106,7 +121,7 @@ const Facilities = () => {
       href: "#",
       cta: "Find Location",
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-blue-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-green-500/30 to-blue-600/30" />
       ),
       className: "lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-4",
     },
@@ -117,7 +132,7 @@ const Facilities = () => {
       href: "#",
       cta: "Get Help",
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-pink-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-pink-600/30" />
       ),
       className: "lg:col-start-3 lg:col-end-4 lg:row-start-3 lg:row-end-4",
     },
