@@ -12,7 +12,7 @@ const FeaturedTenants = () => {
     {
       name: "M&G Life",
       category: "Coffee & Beverages",
-      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2021/04/unnamed-9.webp?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/06/SnapInsta.to_502247740_18516494998054941_6968524714097791824_n.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
