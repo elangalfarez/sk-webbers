@@ -189,6 +189,7 @@ const Navbar = () => {
                     <button
                       onClick={() => handleDropdownToggle(item.name)}
                       className="flex items-center justify-between w-full text-left px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors duration-200 rounded-lg"
+                      className="flex items-center justify-between w-full text-left px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-primary transition-colors duration-200 rounded-lg"
                     >
                       {item.name}
                       <ChevronDown
@@ -210,7 +211,7 @@ const Navbar = () => {
                         <a
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-600 hover:bg-purple-50 hover:text-primary transition-colors duration-200 rounded-lg"
+                          className="block px-4 py-2 text-sm text-gray-600 hover:bg-amber-50 hover:text-primary transition-colors duration-200 rounded-lg"
                         >
                           {subItem.name}
                         </a>
@@ -220,7 +221,7 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors duration-200 rounded-lg"
+                    className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-primary transition-colors duration-200 rounded-lg"
                   >
                     {item.name}
                   </a>

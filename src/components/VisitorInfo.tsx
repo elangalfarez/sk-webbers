@@ -71,7 +71,7 @@ const VisitorInfo = () => {
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-100 rounded-full group-hover:bg-purple-200 transition-colors">
+                <div className="p-3 bg-amber-100 rounded-full group-hover:bg-amber-200 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 ml-4">{item.title}</h3>
@@ -104,7 +104,7 @@ const VisitorInfo = () => {
                 href={contact.href}
                 className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group"
               >
-                <div className="p-2 bg-purple-100 rounded-full group-hover:bg-purple-200 transition-colors">
+                <div className="p-2 bg-amber-100 rounded-full group-hover:bg-amber-200 transition-colors">
                   <contact.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div className="ml-4">

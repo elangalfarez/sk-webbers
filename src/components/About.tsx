@@ -14,6 +14,7 @@ const About = () => {
               className="w-full h-96 object-cover rounded-2xl shadow-xl"
             />
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl opacity-20"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-2xl opacity-20"></div>
           </div>
           
           {/* Content */}

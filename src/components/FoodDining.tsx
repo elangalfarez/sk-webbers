@@ -84,7 +84,7 @@ const FoodDining = () => {
                 </div>
                 
                 <div className="flex items-center text-gray-600 mb-4">
-                  <Utensils className="w-4 h-4 mr-2 text-secondary" />
+                  <Utensils className="w-4 h-4 mr-2 text-amber-500" />
                   <span className="text-sm">{restaurant.category}</span>
                 </div>
                 

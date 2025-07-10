@@ -110,7 +110,7 @@ const Facilities = () => {
       href: "#",
       cta: "Connect Now",
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-600/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-amber-500/30" />
       ),
       className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
     },
@@ -121,7 +121,7 @@ const Facilities = () => {
       href: "#",
       cta: "Find Location",
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-green-500/30 to-blue-600/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-yellow-500/30" />
       ),
       className: "lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-4",
     },
@@ -132,7 +132,7 @@ const Facilities = () => {
       href: "#",
       cta: "Get Help",
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-pink-600/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-amber-600/30" />
       ),
       className: "lg:col-start-3 lg:col-end-4 lg:row-start-3 lg:row-end-4",
     },

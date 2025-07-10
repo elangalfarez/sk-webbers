@@ -60,6 +60,7 @@ const Events = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {event.category}
                 </div>
               </div>

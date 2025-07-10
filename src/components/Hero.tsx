@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Welcome to <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Supermal Karawaci</span>
+          Welcome to <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-400">Supermal Karawaci</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
           Your Shopping, Culinary, & Entertainment Destination

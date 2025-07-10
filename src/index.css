@@ -6,7 +6,7 @@
 
 @layer utilities {
   .gradient-card {
-    background: linear-gradient(115deg, #8B5CF6 0%, #EC4899 100%);
+    background: linear-gradient(115deg, #121421 0%, #F59E0B 100%);
   }
   
   .scrollbar-hide::-webkit-scrollbar {

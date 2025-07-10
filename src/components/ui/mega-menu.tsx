@@ -86,6 +86,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                       {navItem.subMenus.map((sub) => (
                         <motion.div layout className="w-full min-w-[200px]" key={sub.title}>
                           <h3 className="mb-4 text-sm font-semibold text-primary">
+                          <h3 className="mb-4 text-sm font-semibold text-amber-600">
                             {sub.title}
                           </h3>
                           <ul className="space-y-3">
@@ -95,9 +96,9 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                                 <li key={item.label}>
                                   <a
                                     href="#"
-                                    className="flex items-start space-x-3 group p-2 rounded-lg hover:bg-purple-50 transition-colors duration-200"
+                                    className="flex items-start space-x-3 group p-2 rounded-lg hover:bg-amber-50 transition-colors duration-200"
                                   >
-                                    <div className="flex size-8 shrink-0 items-center justify-center rounded-md bg-purple-100 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
+                                    <div className="flex size-8 shrink-0 items-center justify-center rounded-md bg-amber-100 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                                       <Icon className="h-4 w-4 flex-none" />
                                     </div>
                                     <div className="w-max leading-5">
