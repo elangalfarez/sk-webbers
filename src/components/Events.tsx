@@ -8,7 +8,7 @@ const Events = () => {
       title: "Baba Lili Tata Beach Party",
       date: "12 June - 13 Jul 2025",
       time: "10:00 AM - 10:00 PM",
-      location: "Ground Floor Atrium",
+      location: "Ground Floor, Grand Atrium",
       description: "Baba Lili Tata 1st Live Show in Jabodetabek",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-06-28-at-15.10.14_4261ce1f-scaled.jpg",
       category: "Kids"
