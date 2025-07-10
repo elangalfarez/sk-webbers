@@ -20,7 +20,7 @@ const Hero = () => {
           Welcome to <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Supermal Karawaci</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Your Lifestyle, Shopping & Culinary Destination
+          Your Shopping, Culinary, & Entertainment Destination
         </p>
         <button className="inline-flex items-center px-8 py-4 gradient-card text-white font-semibold rounded-full hover:shadow-2xl transform hover:scale-105 transition-all duration-300 shadow-lg">
           See What's On
