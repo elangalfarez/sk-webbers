@@ -10,37 +10,37 @@ const FeaturedTenants = () => {
       featured: true
     },
     {
-      name: "Starbucks",
+      name: "M&G Life",
       category: "Coffee & Beverages",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2021/04/unnamed-9.webp?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
-      name: "Uniqlo",
+      name: "Top Toy",
       category: "Casual Wear",
-      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/unnamed-13.webp?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/toppers-toy.jpg",
       featured: false
     },
     {
-      name: "H&M",
+      name: "Steak 21",
       category: "Fashion Forward",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/hm-sk.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
-      name: "Pizza Hut",
+      name: "Diamond & Co",
       category: "Family Dining",
       image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: false
     },
     {
-      name: "OH! Some",
+      name: "Queensland",
       category: "Beauty & Cosmetics",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2022/12/ohsome.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     },
     {
-      name: "Ace Hardware",
+      name: "Celcius",
       category: "Home & Garden",
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: false
