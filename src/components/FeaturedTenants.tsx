@@ -52,7 +52,7 @@ const FeaturedTenants = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Tenants</span>
+            New <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Tenants</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Discover premium brands and local favorites all under one roof
