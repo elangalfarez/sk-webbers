@@ -40,9 +40,9 @@ const FeaturedTenants = () => {
       featured: true
     },
     {
-      name: "Celcius",
+      name: "Birkenstock",
       category: "Fashion & Lifestyle",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-15.39.07_b7a7e03a-scaled.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       featured: true
     }
   ];
