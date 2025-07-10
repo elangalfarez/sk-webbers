@@ -86,7 +86,6 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                       {navItem.subMenus.map((sub) => (
                         <motion.div layout className="w-full min-w-[200px]" key={sub.title}>
                           <h3 className="mb-4 text-sm font-semibold text-primary">
-                          <h3 className="mb-4 text-sm font-semibold text-amber-600">
                             {sub.title}
                           </h3>
                           <ul className="space-y-3">
