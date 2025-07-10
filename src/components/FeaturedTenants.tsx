@@ -19,7 +19,7 @@ const FeaturedTenants = () => {
       name: "Top Toy",
       category: "Casual Wear",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/toppers-toy.jpg",
-      featured: false
+      featured: true
     },
     {
       name: "Steak 21",
@@ -31,7 +31,7 @@ const FeaturedTenants = () => {
       name: "Diamond & Co",
       category: "Family Dining",
       image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      featured: false
+      featured: true
     },
     {
       name: "Queensland",
