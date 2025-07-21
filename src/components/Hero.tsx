@@ -67,7 +67,7 @@ const Hero = () => {
               <div className="space-y-4 md:space-y-6">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mt-8 md:mt-12">
                   Welcome to <br/> 
-                  <span className="text-gold">Supermal Karawaci</span>
+                  <span className="text-2x1">Supermal Karawaci</span>
                 </h1>
                 <p className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-lg">
                   Your Shopping, Culinary, & Entertainment Destination
