@@ -32,7 +32,7 @@ const Events = () => {
       description: "Stationery and book supplies at 70% discount",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-14.42.40_d70e7702-scaled.jpg",
       category: "Family"
-    }
+    },
     {
       id: 4,
       title: "Pets Nation Festival Vol. 2",
@@ -42,7 +42,7 @@ const Events = () => {
       description: "Stationery and book supplies at 70% discount",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-14.42.40_d70e7702-scaled.jpg",
       category: "Family"
-    },
+    }
   ];
 
   return (
