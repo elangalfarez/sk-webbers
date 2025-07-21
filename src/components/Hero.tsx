@@ -65,17 +65,13 @@ const Hero = () => {
             {/* Left Content */}
             <div className="space-y-6 md:space-y-8">
               <div className="space-y-4 md:space-y-6">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mt-8 md:mt-12">
                   Welcome to <br/> 
                   <span className="text-gold">Supermal Karawaci</span>
                 </h1>
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-lg">
+                <p className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-lg">
                   Your Shopping, Culinary, & Entertainment Destination
                 </p>
-                <button className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-primary border border-gold text-white font-semibold rounded-full hover:bg-dark-gray hover:shadow-2xl transform hover:scale-105 transition-all duration-300 shadow-lg text-sm md:text-base">
-                  See What's On
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </button>
               </div>
 
               {/* What's On Preview Cards */}
