@@ -147,21 +147,21 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0 flex items-center flex-1">
             <img
               src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/LOGO-SK-Tulisan-Putih-scaled.png"
               alt="Supermal Karawaci"
-              className="h-12 w-auto mr-3"
+              className="h-16 w-auto"
             />
           </div>
 
           {/* Desktop Mega Menu */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center justify-center flex-2">
             <MegaMenu items={megaMenuItems} className="font-medium" />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex-1 flex justify-end">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-white hover:text-gold transition-colors duration-200"
