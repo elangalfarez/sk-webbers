@@ -109,7 +109,7 @@ const Hero = () => {
             <div className="relative lg:flex justify-end hidden">
               <div className="relative">
                 <img 
-                  src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Revisi.png"
+                  src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                   alt="Supermal Karawaci Models"
                   className="w-full max-w-lg h-auto object-contain"
                 />
