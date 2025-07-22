@@ -113,12 +113,13 @@ const Hero = () => {
               <img 
                 src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                 alt="Supermal Karawaci Models"
-                className="h-auto w-auto object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 lg:translate-x-1/4 lg:scale-110 xl:translate-x-1/3 xl:scale-115 2xl:translate-x-2/5 2xl:scale-120"
+                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 lg:translate-x-20 xl:translate-x-24 2xl:translate-x-32"
                 style={{
-                  height: 'calc(100vh - 4rem)',
-                  minHeight: '500px',
-                  transformOrigin: 'bottom right',
-                  maxWidth: 'none'
+                  height: '100vh',
+                  width: 'auto',
+                  transformOrigin: 'bottom center',
+                  maxWidth: 'none',
+                  minHeight: '100vh'
                 }}
               />
             </div>
