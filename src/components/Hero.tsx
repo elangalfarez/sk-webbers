@@ -109,15 +109,15 @@ const Hero = () => {
             <div className="relative hidden lg:flex justify-end items-end h-full overflow-hidden">
               <div className="relative flex items-end justify-end w-full h-full">
                 <img 
-                  src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
-                  alt="Supermal Karawaci Models"
-                  className="h-auto object-contain object-bottom lg:max-w-md xl:max-w-lg 2xl:max-w-xl 3xl:max-w-2xl lg:translate-x-8 xl:translate-x-12 2xl:translate-x-16"
-                  style={{
-                    height: 'calc(100vh - 8rem)',
-                    minHeight: '500px',
-                    maxHeight: 'none'
-                  }}
-                />
+                    src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
+                    alt="Supermal Karawaci Models"
+                    className="h-auto object-contain object-bottom lg:max-w-md xl:max-w-lg 2xl:max-w-xl 3xl:max-w-2xl lg:translate-x-16   xl:translate-x-20 2xl:translate-x-24"
+                    style={{
+                      height: 'calc(100vh - 8rem)',
+                      minHeight: '500px',
+                      maxHeight: 'none'
+                    }}
+                  />
               </div>
             </div>
           </div>
