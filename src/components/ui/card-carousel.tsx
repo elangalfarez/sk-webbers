@@ -146,8 +146,3 @@ export const CardCarousel: React.FC<CarouselProps> = ({
     </div>
   )
 }
-        </div>
-      </div>
-    </section>
-  )
-}
