@@ -111,7 +111,11 @@ const Hero = () => {
                 <img 
                     src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                     alt="Supermal Karawaci Models"
-                    className="h-auto object-contain object-bottom lg:max-w-md xl:max-w-lg 2xl:max-w-xl 3xl:max-w-2xl lg:translate-x-16   xl:translate-x-20 2xl:translate-x-24"
+                    className="h-auto object-contain object-bottom 
+                               lg:max-w-md lg:-mr-8
+                               xl:max-w-lg xl:-mr-12
+                               2xl:max-w-xl 2xl:-mr-16
+                               3xl:max-w-2xl 3xl:-mr-20"
                     style={{
                       height: 'calc(100vh - 8rem)',
                       minHeight: '500px',
