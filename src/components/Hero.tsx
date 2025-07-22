@@ -47,7 +47,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center overflow-hidden" style={{height: '100vh'}}>
+      <section className="relative min-h-screen flex items-center overflow-hidden" style={{height: '100vh', minHeight: '100vh'}}>
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -106,42 +106,43 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Mobile Only Layout */}
-          <div className="block md:hidden w-full">
-            <div className="px-4 sm:px-6 py-6 sm:py-8 flex flex-col justify-center relative z-20">
-              <div className="space-y-3 sm:space-y-4">
-                {/* Mobile Typography */}
-                <div className="space-y-2 sm:space-y-3">
-                  <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight">
-                    Welcome to <br className="hidden sm:block"/> 
+          {/* Mobile Only Layout - Fixed Full Screen */}
+          <div className="flex md:hidden flex-col h-full w-full absolute inset-0 z-20">
+            {/* Mobile Content - Top Part */}
+            <div className="flex-1 px-4 sm:px-6 py-6 sm:py-8 flex flex-col justify-start pt-16 sm:pt-20">
+              <div className="space-y-4 sm:space-y-6">
+                {/* Mobile Typography - Main Title and Subtitle */}
+                <div className="space-y-3 sm:space-y-4">
+                  <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
+                    Welcome to <br/> 
                     <span className="text-gold">Supermal Karawaci</span>
                   </h1>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed opacity-90">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed opacity-90">
                     Your Shopping, Culinary, & Entertainment Destination
                   </p>
                 </div>
 
                 {/* Mobile What's On Section */}
-                <div className="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
-                  <h3 className="text-base sm:text-lg font-semibold text-white">What's On</h3>
+                <div className="space-y-3 sm:space-y-4 mt-6 sm:mt-8">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">What's On</h3>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {whatsOnCards.map((event) => (
                       <div
                         key={event.id}
                         onClick={() => openEventModal(event)}
-                        className="bg-black/40 backdrop-blur-sm rounded-lg p-3 cursor-pointer hover:bg-black/50 transition-all duration-300 border border-white/10"
+                        className="bg-black/40 backdrop-blur-sm rounded-lg p-4 cursor-pointer hover:bg-black/50 transition-all duration-300 border border-white/10"
                       >
                         <div className="flex items-center justify-between">
-                          <div>
-                            <div className="bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded-full w-fit mb-1">
+                          <div className="flex-1">
+                            <div className="bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded-full w-fit mb-2">
                               {event.category}
                             </div>
                             <h4 className="text-white font-semibold text-sm mb-1">{event.title}</h4>
                             <p className="text-gray-300 text-xs opacity-75">{event.date}</p>
                           </div>
-                          <div className="text-gold">
-                            <ChevronRight className="w-4 h-4" />
+                          <div className="text-gold ml-4">
+                            <ChevronRight className="w-5 h-5" />
                           </div>
                         </div>
                       </div>
@@ -151,18 +152,16 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Mobile Models */}
-            <div className="relative h-64 sm:h-80 flex items-end justify-center mt-6">
+            {/* Mobile Models - Bottom Fixed Position */}
+            <div className="absolute bottom-0 left-0 right-0 h-80 sm:h-96 flex items-end justify-center">
               <img 
                 src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                 alt="Supermal Karawaci Models"
-                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105"
+                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 max-w-full"
                 style={{
                   height: '100%',
                   width: 'auto',
-                  transformOrigin: 'bottom center',
-                  maxWidth: '100%',
-                  maxHeight: '100%'
+                  transformOrigin: 'bottom center'
                 }}
               />
             </div>
