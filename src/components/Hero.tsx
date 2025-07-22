@@ -66,13 +66,13 @@ const Hero = () => {
           <div className="hidden md:flex flex-1 max-w-3xl px-4 sm:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 lg:py-8 flex-col justify-center">
             <div className="space-y-4 sm:space-y-6 md:space-y-8 pt-8 sm:pt-12 lg:pt-16 xl:pt-20">
               <div className="space-y-3 sm:space-y-4 md:space-y-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+                  Welcome to <br/>
+                  <span className="text-orange-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Supermal Karawaci</span>
+                </h1>
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed opacity-90">
                   Your Shopping, Culinary, & Entertainment Destination
                 </p>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
-                  Welcome to <br/>
-                  <span className="text-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Supermal Karawaci</span>
-                </h1>
               </div>
               
               <div className="space-y-4 sm:space-y-6 mt-8 lg:mt-12">
@@ -112,13 +112,13 @@ const Hero = () => {
               <div className="space-y-3 sm:space-y-4">
                 {/* Mobile Typography */}
                 <div className="space-y-2 sm:space-y-3">
+                  <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight">
+                    Welcome to <br className="hidden sm:block"/> 
+                    <span className="text-orange-400">Supermal Karawaci</span>
+                  </h1>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed opacity-90">
                     Your Shopping, Culinary, & Entertainment Destination
                   </p>
-                  <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight">
-                    Welcome to <br className="hidden sm:block"/> 
-                    <span className="text-blue-400">Supermal Karawaci</span>
-                  </h1>
                 </div>
 
                 {/* Mobile What's On Section */}
