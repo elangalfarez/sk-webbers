@@ -47,7 +47,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20">
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20" style={{height: '100vh'}}>
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -113,13 +113,13 @@ const Hero = () => {
               <img 
                 src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                 alt="Supermal Karawaci Models"
-                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 lg:translate-x-20 xl:translate-x-24 2xl:translate-x-32"
+                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 lg:translate-x-16 xl:translate-x-20 2xl:translate-x-24"
                 style={{
-                  height: '100vh',
+                  height: '100%',
                   width: 'auto',
                   transformOrigin: 'bottom center',
                   maxWidth: 'none',
-                  minHeight: '100vh'
+                  maxHeight: '100%'
                 }}
               />
             </div>
