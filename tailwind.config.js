@@ -17,6 +17,9 @@ export default {
       flex: {
         '2': '2 2 0%',
       },
+      screens: {
+        '3xl': '1600px',
+      },
     },
   },
   plugins: [],
