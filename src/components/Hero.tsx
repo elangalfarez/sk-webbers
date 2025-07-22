@@ -68,7 +68,7 @@ const Hero = () => {
               <div className="space-y-3 sm:space-y-4 md:space-y-6">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                   Welcome to <br/>
-                  <span className="text-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Supermal Karawaci</span>
+                  <span className="text-gold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Supermal Karawaci</span>
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed opacity-90">
                   Your Shopping, Culinary, & Entertainment Destination
@@ -114,7 +114,7 @@ const Hero = () => {
                 <div className="space-y-2 sm:space-y-3">
                   <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight">
                     Welcome to <br className="hidden sm:block"/> 
-                    <span className="text-400">Supermal Karawaci</span>
+                    <span className="text-gold">Supermal Karawaci</span>
                   </h1>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed opacity-90">
                     Your Shopping, Culinary, & Entertainment Destination
@@ -140,7 +140,7 @@ const Hero = () => {
                             <h4 className="text-white font-semibold text-sm mb-1">{event.title}</h4>
                             <p className="text-gray-300 text-xs opacity-75">{event.date}</p>
                           </div>
-                          <div className="text-orange-400">
+                          <div className="text-gold">
                             <ChevronRight className="w-4 h-4" />
                           </div>
                         </div>
@@ -189,8 +189,8 @@ const Hero = () => {
         
         {/* Enhanced Scroll Indicator */}
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
-          <div className="w-6 h-10 border-2 border-orange-400/60 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-orange-400/80 rounded-full mt-2 animate-bounce"></div>
+          <div className="w-6 h-10 border-2 border-gold/60 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-gold/80 rounded-full mt-2 animate-bounce"></div>
           </div>
         </div>
       </section>
@@ -226,15 +226,15 @@ const Hero = () => {
                 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center text-gray-600">
-                    <Calendar className="w-5 h-5 mr-3 text-orange-500" />
+                    <Calendar className="w-5 h-5 mr-3 text-gold" />
                     <span>{selectedEvent.date}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <Clock className="w-5 h-5 mr-3 text-orange-500" />
+                    <Clock className="w-5 h-5 mr-3 text-gold" />
                     <span>{selectedEvent.time}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <MapPin className="w-5 h-5 mr-3 text-orange-500" />
+                    <MapPin className="w-5 h-5 mr-3 text-gold" />
                     <span>{selectedEvent.location}</span>
                   </div>
                 </div>
@@ -245,7 +245,7 @@ const Hero = () => {
                   <button className="flex-1 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                     Learn More
                   </button>
-                  <button className="flex-1 py-3 bg-orange-400 text-white rounded-lg font-semibold hover:bg-orange-500 transition-colors">
+                  <button className="flex-1 py-3 bg-gold text-white rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
                     Get Directions
                   </button>
                 </div>
