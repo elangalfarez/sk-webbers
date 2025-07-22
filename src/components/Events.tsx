@@ -56,7 +56,7 @@ const Events = () => {
     {
       id: 6,
       title: "Tech Innovation Expo",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       date: "5 - 10 September 2025",
       time: "10:00 AM - 8:00 PM",
       location: "Third Floor, Tech Hub",
