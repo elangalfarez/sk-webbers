@@ -59,44 +59,44 @@ const Hero = () => {
         </div>
         
         {/* Main Content Container */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start lg:items-center min-h-[calc(100vh-8rem)] lg:min-h-[80vh]">
             
             {/* Left Content */}
-            <div className="space-y-6 md:space-y-8">
-              <div className="space-y-4 md:space-y-6">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mt-8 md:mt-12">
+            <div className="space-y-4 sm:space-y-6 md:space-y-8 pt-4 sm:pt-6 lg:pt-0">
+              <div className="space-y-3 sm:space-y-4 md:space-y-6">
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12">
                   Welcome to <br/> 
-                  <span className="text-2x1">Supermal Karawaci</span>
+                  <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Supermal Karawaci</span>
                 </h1>
-                <p className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-lg">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-lg">
                   Your Shopping, Culinary, & Entertainment Destination
                 </p>
               </div>
 
               {/* What's On Preview Cards */}
-              <div className="space-y-4">
-                <h3 className="text-xl md:text-2xl font-semibold text-white">What's On</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-4">
+              <div className="space-y-3 sm:space-y-4">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">What's On</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-3 sm:gap-4">
                   {whatsOnCards.map((event) => (
                     <div
                       key={event.id}
                       onClick={() => openEventModal(event)}
-                      className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden cursor-pointer hover:bg-white/20 transition-all duration-300 transform hover:scale-105 group"
+                      className="relative bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer hover:bg-white/20 transition-all duration-300 transform hover:scale-105 group"
                     >
-                      <div className="aspect-[4/3] relative">
+                      <div className="aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] relative">
                         <img 
                           src={event.image}
                           alt={event.title}
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                        <div className="absolute top-3 left-3 bg-gold text-primary px-2 py-1 rounded-full text-xs font-semibold">
+                        <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-gold text-primary px-2 py-1 rounded-full text-xs font-semibold">
                           {event.category}
                         </div>
                       </div>
-                      <div className="p-4">
-                        <h4 className="text-white font-semibold text-sm mb-2 line-clamp-2">{event.title}</h4>
+                      <div className="p-3 sm:p-4">
+                        <h4 className="text-white font-semibold text-xs sm:text-sm mb-2 line-clamp-2">{event.title}</h4>
                         <p className="text-gray-300 text-xs">{event.date}</p>
                       </div>
                     </div>
@@ -105,13 +105,17 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Right Content - Models Image */}
-            <div className="relative lg:flex justify-end hidden">
-              <div className="relative">
+            {/* Right Content - Models Image - Fixed positioning */}
+            <div className="relative hidden lg:flex justify-end items-end h-full">
+              <div className="relative flex items-end justify-end w-full h-full">
                 <img 
                   src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                   alt="Supermal Karawaci Models"
-                  className="w-full max-w-lg h-auto object-contain"
+                  className="w-full max-w-sm xl:max-w-lg h-auto object-contain object-bottom"
+                  style={{
+                    maxHeight: 'calc(100vh - 12rem)',
+                    minHeight: '400px'
+                  }}
                 />
               </div>
             </div>
@@ -119,7 +123,7 @@ const Hero = () => {
         </div>
         
         {/* Scroll Indicator */}
-        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-gold rounded-full flex justify-center">
             <div className="w-1 h-3 bg-gold rounded-full mt-2"></div>
           </div>
