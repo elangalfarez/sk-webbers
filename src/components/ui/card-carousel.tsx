@@ -18,14 +18,23 @@ import {
 import { Badge } from "@/components/ui/badge"
 
 interface CarouselProps {
-  images: { src: string; alt: string }[]
+  events: {
+    id: number;
+    title: string;
+    image: string;
+    date: string;
+    time: string;
+    location: string;
+    description: string;
+    category: string;
+  }[]
   autoplayDelay?: number
   showPagination?: boolean
   showNavigation?: boolean
 }
 
 export const CardCarousel: React.FC<CarouselProps> = ({
-  images,
+  events,
   autoplayDelay = 1500,
   showPagination = true,
   showNavigation = true,
@@ -33,20 +42,21 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   const css = `
   .swiper {
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
   
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
-    /* height: 300px; */
-    /* margin: 20px; */
+    width: 350px;
+    height: 500px;
   }
   
   .swiper-slide img {
     display: block;
     width: 100%;
+    height: 250px;
+    object-fit: cover;
   }
   
   
@@ -58,87 +68,84 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   }
   `
   return (
-    <section className="w-ace-y-4">
+    <div className="w-full">
       <style>{css}</style>
-      <div className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
-        <div className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/5 p-2 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
-          <Badge
-            variant="outline"
-            className="absolute left-4 top-6 rounded-[14px] border border-black/10 text-base md:left-6"
-          >
-            <SparklesIcon className="fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
-            Latest component
-          </Badge>
-          <div className="flex flex-col justify-center pb-2 pl-4 pt-14 md:items-center">
-            <div className="flex gap-2">
-              <div>
-                <h3 className="text-4xl opacity-85 font-bold tracking-tight">
-                  Card Carousel
-                </h3>
-                <p>Seamless Images carousel animation.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex w-full items-center justify-center gap-4">
-            <div className="w-full">
-              <Swiper
-                spaceBetween={50}
-                autoplay={{
-                  delay: autoplayDelay,
-                  disableOnInteraction: false,
-                }}
-                effect={"coverflow"}
-                grabCursor={true}
-                centeredSlides={true}
-                loop={true}
-                slidesPerView={"auto"}
-                coverflowEffect={{
-                  rotate: 0,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 2.5,
-                }}
-                pagination={showPagination}
-                navigation={
-                  showNavigation
-                    ? {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                      }
-                    : undefined
+      <div className="w-full">
+        <Swiper
+          spaceBetween={30}
+          autoplay={{
+            delay: autoplayDelay,
+            disableOnInteraction: false,
+          }}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={showPagination}
+          navigation={
+            showNavigation
+              ? {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
                 }
-                modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
-              >
-                {images.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="size-full rounded-3xl">
-                      <img
-                        src={image.src}
-                        width={500}
-                        height={500}
-                        className="size-full rounded-xl"
-                        alt={image.alt}
-                      />
+              : undefined
+          }
+          modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
+        >
+          {events.map((event, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-full">
+                <div className="relative">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-gold text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                    {event.category}
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-primary mb-3">
+                    {event.title}
+                  </h3>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center text-gray-600">
+                      <span className="text-sm">{event.date}</span>
                     </div>
-                  </SwiperSlide>
-                ))}
-                {images.map((image, index) => (
-                  <SwiperSlide key={index + images.length}>
-                    <div className="size-full rounded-3xl">
-                      <img
-                        src={image.src}
-                        width={200}
-                        height={200}
-                        className="size-full rounded-xl"
-                        alt={image.alt}
-                      />
+                    <div className="flex items-center text-gray-600">
+                      <span className="text-sm">{event.time}</span>
                     </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
+                    <div className="flex items-center text-gray-600">
+                      <span className="text-sm">{event.location}</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+                    {event.description}
+                  </p>
+                  
+                  <button className="w-full py-3 bg-primary border border-gold text-white rounded-lg font-semibold hover:bg-dark-gray transition-colors">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
+  )
+}
         </div>
       </div>
     </section>
