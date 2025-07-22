@@ -35,12 +35,12 @@ const Events = () => {
     },
     {
       id: 4,
-      title: "Fashion Week Showcase",
+      title: "Pets Nation Festival Vol. 2",
       image: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       date: "15 - 20 August 2025",
       time: "2:00 PM - 9:00 PM",
-      location: "Second Floor, Fashion Gallery",
-      description: "Discover the latest fashion trends from top Indonesian designers. Experience runway shows, exclusive collections, and meet-and-greet sessions.",
+      location: "Upper Ground, Kids Atrium",
+      description: "Pets Nation Fest Vol 2.",
       category: "Fashion"
     },
     {
