@@ -65,39 +65,39 @@ const Hero = () => {
             {/* Left Content */}
             <div className="space-y-4 sm:space-y-6 md:space-y-8 pt-4 sm:pt-6 lg:pt-0">
               <div className="space-y-3 sm:space-y-4 md:space-y-6">
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12">
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-16 xl:mt-20">
                   Welcome to <br/> 
-                  <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Supermal Karawaci</span>
+                  <span className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl">Supermal Karawaci</span>
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-lg">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-200 leading-relaxed max-w-lg xl:max-w-xl">
                   Your Shopping, Culinary, & Entertainment Destination
                 </p>
               </div>
 
               {/* What's On Preview Cards */}
               <div className="space-y-3 sm:space-y-4">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">What's On</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-3 sm:gap-4">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white">What's On</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
                   {whatsOnCards.map((event) => (
                     <div
                       key={event.id}
                       onClick={() => openEventModal(event)}
-                      className="relative bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer hover:bg-white/20 transition-all duration-300 transform hover:scale-105 group"
+                      className="relative bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer hover:bg-white/20 transition-all duration-300 transform hover:scale-105 group lg:max-w-xs xl:max-w-sm"
                     >
-                      <div className="aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] relative">
+                      <div className="aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] xl:aspect-[16/10] relative">
                         <img 
                           src={event.image}
                           alt={event.title}
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                        <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-gold text-primary px-2 py-1 rounded-full text-xs font-semibold">
+                        <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-gold text-primary px-2 py-1 rounded-full text-xs lg:text-sm font-semibold">
                           {event.category}
                         </div>
                       </div>
-                      <div className="p-3 sm:p-4">
-                        <h4 className="text-white font-semibold text-xs sm:text-sm mb-2 line-clamp-2">{event.title}</h4>
-                        <p className="text-gray-300 text-xs">{event.date}</p>
+                      <div className="p-3 sm:p-4 lg:p-5">
+                        <h4 className="text-white font-semibold text-xs sm:text-sm lg:text-base mb-2 line-clamp-2">{event.title}</h4>
+                        <p className="text-gray-300 text-xs lg:text-sm">{event.date}</p>
                       </div>
                     </div>
                   ))}
@@ -111,10 +111,10 @@ const Hero = () => {
                 <img 
                   src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                   alt="Supermal Karawaci Models"
-                  className="h-auto object-contain object-bottom lg:max-w-md xl:max-w-lg 2xl:max-w-xl 3xl:max-w-2xl lg:translate-x-8 xl:translate-x-12 2xl:translate-x-16"
+                  className="h-auto object-contain object-bottom lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl 3xl:max-w-3xl lg:translate-x-12 xl:translate-x-16 2xl:translate-x-20 3xl:translate-x-24"
                   style={{
-                    height: 'calc(100vh - 8rem)',
-                    minHeight: '500px',
+                    height: 'calc(100vh - 6rem)',
+                    minHeight: '600px',
                     maxHeight: 'none'
                   }}
                 />
