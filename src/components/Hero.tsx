@@ -66,13 +66,13 @@ const Hero = () => {
           <div className="hidden md:flex flex-1 max-w-3xl px-4 sm:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 lg:py-8 flex-col justify-center">
             <div className="space-y-4 sm:space-y-6 md:space-y-8 pt-4 sm:pt-6 lg:pt-0">
               <div className="space-y-3 sm:space-y-4 md:space-y-6">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed opacity-90">
+                  Your Shopping, Culinary, & Entertainment Destination
+                </p>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                   Welcome to <br/>
                   <span className="text-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Supermal Karawaci</span>
-                  <br/>
-                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed opacity-90">
-                  Your Shopping, Culinary, & Entertainment Destination
-                </p>
+        
                 </h1>
               </div>
               
