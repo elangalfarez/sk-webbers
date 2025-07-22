@@ -109,8 +109,8 @@ const Hero = () => {
           {/* Mobile Only Layout - Fixed Full Screen */}
           <div className="flex md:hidden flex-col h-full w-full absolute inset-0 z-20">
             {/* Mobile Content - Top Part */}
-            <div className="flex-1 px-4 sm:px-6 py-6 sm:py-8 flex flex-col justify-start pt-16 sm:pt-20">
-              <div className="space-y-4 sm:space-y-6">
+            <div className="flex-1 px-4 sm:px-6 py-6 sm:py-8 flex flex-col justify-start pt-20 sm:pt-24">
+              <div className="space-y-4 sm:space-y-6 mt-4 sm:mt-6">
                 {/* Mobile Typography - Main Title and Subtitle */}
                 <div className="space-y-3 sm:space-y-4">
                   <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
@@ -123,7 +123,7 @@ const Hero = () => {
                 </div>
 
                 {/* Mobile What's On Section */}
-                <div className="space-y-3 sm:space-y-4 mt-6 sm:mt-8">
+                <div className="space-y-3 sm:space-y-4 mt-8 sm:mt-10">
                   <h3 className="text-lg sm:text-xl font-semibold text-white">What's On</h3>
                   
                   <div className="space-y-3">
