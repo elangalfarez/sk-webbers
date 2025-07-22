@@ -59,12 +59,10 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
         </div>
         
-        {/* Main Content Container - Mobile-First Responsive Layout */}
-        <div className="relative z-10 w-full h-full flex flex-col md:flex-row">
-          {/* Mobile: Stacked Layout, Desktop: Side by side */}
-          
+        {/* Main Content Container - Fixed Positioning */}
+        <div className="relative z-10 w-full h-full">
           {/* Content Area - Mobile Optimized, Desktop Compact */}
-          <div className="flex-1 px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-12 flex flex-col justify-center md:justify-start lg:justify-center order-1 md:order-1 z-20 md:max-w-2xl lg:max-w-3xl">
+          <div className="flex-1 px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-12 flex flex-col justify-center md:justify-start lg:justify-center relative z-20 md:max-w-2xl lg:max-w-3xl">
             <div className="space-y-3 sm:space-y-4 md:space-y-4 lg:space-y-6">
               {/* Typography - Mobile Optimized, Desktop Compact */}
               <div className="space-y-2 sm:space-y-3 md:space-y-3 lg:space-y-4">
@@ -137,40 +135,37 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Models Image - Mobile Optimized, Desktop Compact with Hover */}
-          <div className="relative order-2 md:order-2 flex-shrink-0">
-            {/* Mobile Layout */}
-            <div className="block md:hidden relative h-64 sm:h-80 flex items-end justify-center">
+          {/* Mobile Models Layout */}
+          <div className="block md:hidden relative h-64 sm:h-80 flex items-end justify-center mt-6">
+            <img 
+              src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
+              alt="Supermal Karawaci Models"
+              className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105"
+              style={{
+                height: '100%',
+                width: 'auto',
+                transformOrigin: 'bottom center',
+                maxWidth: '100%',
+                maxHeight: '100%'
+              }}
+            />
+          </div>
+
+          {/* Desktop Models - Fixed to Right Side */}
+          <div className="hidden md:block absolute top-0 right-0 bottom-0 w-80 lg:w-96 xl:w-[26rem] 2xl:w-[30rem] overflow-visible z-10">
+            <div className="relative w-full h-full flex items-end justify-end">
               <img 
                 src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                 alt="Supermal Karawaci Models"
-                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105"
+                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-110 md:translate-x-8 lg:translate-x-12 xl:translate-x-16 2xl:translate-x-20"
                 style={{
                   height: '100%',
                   width: 'auto',
                   transformOrigin: 'bottom center',
-                  maxWidth: '100%',
+                  maxWidth: 'none',
                   maxHeight: '100%'
                 }}
               />
-            </div>
-
-            {/* Desktop Layout - Compact and with Hover Effect */}
-            <div className="hidden md:block absolute right-0 bottom-0 w-80 lg:w-96 xl:w-[26rem] 2xl:w-[30rem] h-full overflow-visible">
-              <div className="relative w-full h-full flex items-end justify-end">
-                <img 
-                  src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
-                  alt="Supermal Karawaci Models"
-                  className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-110 md:translate-x-8 lg:translate-x-12 xl:translate-x-16 2xl:translate-x-20"
-                  style={{
-                    height: '100%',
-                    width: 'auto',
-                    transformOrigin: 'bottom center',
-                    maxWidth: 'none',
-                    maxHeight: '100%'
-                  }}
-                />
-              </div>
             </div>
           </div>
         </div>
