@@ -107,7 +107,7 @@ const Hero = () => {
 
             {/* Right Content - Models Image - Fixed positioning */}
             <div className="relative hidden lg:flex justify-end items-end h-full overflow-hidden">
-              <div className="relative flex items-end justify-end w-full h-full">
+              <div className="absolute bottom-0 right-0 h-full flex items-end justify-end">
                 <img 
                     src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                     alt="Supermal Karawaci Models"
