@@ -117,7 +117,7 @@ const Hero = () => {
                   </p>
                   <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight">
                     Welcome to <br className="hidden sm:block"/> 
-                    <span className="static">Supermal Karawaci</span>
+                    <span className="text-blue-400">Supermal Karawaci</span>
                   </h1>
                 </div>
 
