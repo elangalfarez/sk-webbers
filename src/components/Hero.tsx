@@ -63,25 +63,25 @@ const Hero = () => {
         <div className="relative z-10 w-full h-full flex flex-col md:flex-row">
           {/* Mobile: Stacked Layout, Desktop: Side by side */}
           
-          {/* Content Area - Mobile Optimized */}
-          <div className="flex-1 px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-12 flex flex-col justify-center md:justify-start lg:justify-center order-1 md:order-1 z-20">
-            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8">
-              {/* Typography - Mobile Optimized */}
-              <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6">
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-300 leading-relaxed opacity-90">
+          {/* Content Area - Mobile Optimized, Desktop Compact */}
+          <div className="flex-1 px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-12 flex flex-col justify-center md:justify-start lg:justify-center order-1 md:order-1 z-20 md:max-w-2xl lg:max-w-3xl">
+            <div className="space-y-3 sm:space-y-4 md:space-y-4 lg:space-y-6">
+              {/* Typography - Mobile Optimized, Desktop Compact */}
+              <div className="space-y-2 sm:space-y-3 md:space-y-3 lg:space-y-4">
+                <p className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg text-gray-300 leading-relaxed opacity-90">
                   Your Shopping, Culinary, & Entertainment Destination
                 </p>
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white leading-tight">
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
                   Welcome to <br className="hidden sm:block"/> 
                   <span className="text-orange-400">Supermal Karawaci</span>
                 </h1>
               </div>
 
-              {/* What's On Section - Mobile Optimized */}
-              <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6 mt-4 sm:mt-6 md:mt-8 lg:mt-12">
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-white">What's On</h3>
+              {/* What's On Section - Mobile Optimized, Desktop Compact */}
+              <div className="space-y-2 sm:space-y-3 md:space-y-3 lg:space-y-4 mt-4 sm:mt-6 md:mt-6 lg:mt-8">
+                <h3 className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-semibold text-white">What's On</h3>
                 
-                {/* Mobile: Text-only cards, Desktop: Image cards */}
+                {/* Mobile: Text-only cards */}
                 <div className="block md:hidden">
                   <div className="space-y-2">
                     {whatsOnCards.map((event) => (
@@ -107,27 +107,27 @@ const Hero = () => {
                   </div>
                 </div>
 
-                {/* Desktop: Full image cards */}
-                <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-4xl">
+                {/* Desktop: Smaller, more compact image cards */}
+                <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-full">
                   {whatsOnCards.map((event) => (
                     <div
                       key={event.id}
                       onClick={() => openEventModal(event)}
-                      className="relative bg-black/40 backdrop-blur-sm rounded-xl overflow-hidden cursor-pointer hover:bg-black/50 transition-all duration-300 transform hover:scale-105 group border border-white/10 shadow-lg hover:shadow-2xl"
+                      className="relative bg-black/40 backdrop-blur-sm rounded-lg md:rounded-xl overflow-hidden cursor-pointer hover:bg-black/50 transition-all duration-300 transform hover:scale-105 group border border-white/10 shadow-lg hover:shadow-xl"
                     >
-                      <div className="aspect-[4/3] relative">
+                      <div className="aspect-[4/3] md:aspect-[3/2] relative">
                         <img 
                           src={event.image}
                           alt={event.title}
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                        <div className="absolute top-3 left-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                        <div className="absolute top-2 md:top-3 left-2 md:left-3 bg-yellow-400 text-black px-2 md:px-3 py-1 rounded-full text-xs font-bold shadow-md">
                           {event.category}
                         </div>
                       </div>
-                      <div className="p-4">
-                        <h4 className="text-white font-semibold text-sm mb-2 line-clamp-2">{event.title}</h4>
+                      <div className="p-3 md:p-4">
+                        <h4 className="text-white font-semibold text-xs md:text-sm mb-1 md:mb-2 line-clamp-2">{event.title}</h4>
                         <p className="text-gray-300 text-xs opacity-75">{event.date}</p>
                       </div>
                     </div>
@@ -137,7 +137,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Models Image - Mobile Optimized */}
+          {/* Models Image - Mobile Optimized, Desktop Compact with Hover */}
           <div className="relative order-2 md:order-2 flex-shrink-0">
             {/* Mobile Layout */}
             <div className="block md:hidden relative h-64 sm:h-80 flex items-end justify-center">
@@ -155,13 +155,13 @@ const Hero = () => {
               />
             </div>
 
-            {/* Desktop Layout */}
-            <div className="hidden md:block absolute right-0 bottom-0 w-96 lg:w-[28rem] xl:w-[32rem] 2xl:w-[36rem] h-full overflow-visible">
+            {/* Desktop Layout - Compact and with Hover Effect */}
+            <div className="hidden md:block absolute right-0 bottom-0 w-80 lg:w-96 xl:w-[26rem] 2xl:w-[30rem] h-full overflow-visible">
               <div className="relative w-full h-full flex items-end justify-end">
                 <img 
                   src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                   alt="Supermal Karawaci Models"
-                  className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 md:translate-x-12 lg:translate-x-16 xl:translate-x-20 2xl:translate-x-24"
+                  className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-110 md:translate-x-8 lg:translate-x-12 xl:translate-x-16 2xl:translate-x-20"
                   style={{
                     height: '100%',
                     width: 'auto',
