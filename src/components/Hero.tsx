@@ -55,34 +55,35 @@ const Hero = () => {
             alt="Supermal Karawaci Interior"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/20"></div>
+          {/* Enhanced gradient overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
         </div>
         
-        {/* Main Content Container */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start lg:items-center min-h-[calc(100vh-8rem)] lg:min-h-[80vh]">
-            
-            {/* Left Content */}
+        {/* Main Content Container - Enhanced Layout */}
+        <div className="relative z-10 w-full h-full flex">
+          {/* Left Content Area - Takes up specific width to allow models to extend */}
+          <div className="flex-1 max-w-3xl px-4 sm:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 lg:py-8 flex flex-col justify-center">
             <div className="space-y-4 sm:space-y-6 md:space-y-8 pt-4 sm:pt-6 lg:pt-0">
               <div className="space-y-3 sm:space-y-4 md:space-y-6">
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12">
-                  Welcome to <br/> 
-                  <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Supermal Karawaci</span>
-                </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-lg">
+                {/* Enhanced typography with better hierarchy */}
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed opacity-90">
                   Your Shopping, Culinary, & Entertainment Destination
                 </p>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+                  Welcome to <br/> 
+                  <span className="text-orange-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Supermal Karawaci</span>
+                </h1>
               </div>
 
-              {/* What's On Preview Cards */}
-              <div className="space-y-3 sm:space-y-4">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">What's On</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-3 sm:gap-4">
+              {/* What's On Preview Cards - Enhanced spacing */}
+              <div className="space-y-4 sm:space-y-6 mt-8 lg:mt-12">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">What's On</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-4xl">
                   {whatsOnCards.map((event) => (
                     <div
                       key={event.id}
                       onClick={() => openEventModal(event)}
-                      className="relative bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer hover:bg-white/20 transition-all duration-300 transform hover:scale-105 group"
+                      className="relative bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer hover:bg-black/50 transition-all duration-300 transform hover:scale-105 group border border-white/10"
                     >
                       <div className="aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] relative">
                         <img 
@@ -91,54 +92,51 @@ const Hero = () => {
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                        <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-gold text-primary px-2 py-1 rounded-full text-xs font-semibold">
+                        <div className="absolute top-3 left-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold">
                           {event.category}
                         </div>
                       </div>
-                      <div className="p-3 sm:p-4">
-                        <h4 className="text-white font-semibold text-xs sm:text-sm mb-2 line-clamp-2">{event.title}</h4>
-                        <p className="text-gray-300 text-xs">{event.date}</p>
+                      <div className="p-4">
+                        <h4 className="text-white font-semibold text-sm mb-2 line-clamp-2">{event.title}</h4>
+                        <p className="text-gray-300 text-xs opacity-75">{event.date}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Right Content - Models Image - Fixed positioning */}
-            <div className="relative hidden lg:flex justify-end items-end h-full overflow-hidden">
-              <div className="absolute bottom-0 right-0 h-full flex items-end justify-end">
-                <img 
-                    src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
-                    alt="Supermal Karawaci Models"
-                    className="h-auto object-contain object-bottom 
-                               lg:max-w-md lg:-mr-8
-                               xl:max-w-lg xl:-mr-12
-                               2xl:max-w-xl 2xl:-mr-16
-                               3xl:max-w-2xl 3xl:-mr-20"
-                    style={{
-                      height: 'calc(100vh - 8rem)',
-                      minHeight: '500px',
-                      maxHeight: 'none'
-                    }}
-                  />
-              </div>
+          {/* Right Content - Models Image - Exchange TRX Style Positioning */}
+          <div className="absolute right-0 bottom-0 w-3/5 h-full hidden lg:block overflow-visible">
+            <div className="relative w-full h-full flex items-end justify-end">
+              <img 
+                src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
+                alt="Supermal Karawaci Models"
+                className="h-auto w-auto object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 lg:translate-x-1/4 lg:scale-110 xl:translate-x-1/3 xl:scale-115 2xl:translate-x-2/5 2xl:scale-120"
+                style={{
+                  height: 'calc(100vh - 4rem)',
+                  minHeight: '500px',
+                  transformOrigin: 'bottom right',
+                  maxWidth: 'none'
+                }}
+              />
             </div>
           </div>
         </div>
         
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-gold rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gold rounded-full mt-2"></div>
+        {/* Enhanced Scroll Indicator */}
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+          <div className="w-6 h-10 border-2 border-orange-400/60 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-orange-400/80 rounded-full mt-2 animate-bounce"></div>
           </div>
         </div>
       </section>
 
-      {/* Event Modal */}
+      {/* Event Modal - Enhanced */}
       {selectedEvent && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
             {/* Close Button */}
             <button
               onClick={closeEventModal}
@@ -156,25 +154,25 @@ const Hero = () => {
                   className="w-full h-full object-cover rounded-t-2xl"
                 />
                 <div className="absolute inset-0 bg-black/40 rounded-t-2xl"></div>
-                <div className="absolute top-4 left-4 bg-gold text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
                   {selectedEvent.category}
                 </div>
               </div>
               
               <div className="p-6 md:p-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">{selectedEvent.title}</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{selectedEvent.title}</h2>
                 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center text-gray-600">
-                    <Calendar className="w-5 h-5 mr-3 text-gold" />
+                    <Calendar className="w-5 h-5 mr-3 text-orange-500" />
                     <span>{selectedEvent.date}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <Clock className="w-5 h-5 mr-3 text-gold" />
+                    <Clock className="w-5 h-5 mr-3 text-orange-500" />
                     <span>{selectedEvent.time}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <MapPin className="w-5 h-5 mr-3 text-gold" />
+                    <MapPin className="w-5 h-5 mr-3 text-orange-500" />
                     <span>{selectedEvent.location}</span>
                   </div>
                 </div>
@@ -182,10 +180,10 @@ const Hero = () => {
                 <p className="text-gray-700 leading-relaxed mb-6">{selectedEvent.description}</p>
                 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="flex-1 py-3 bg-primary border border-gold text-white rounded-lg font-semibold hover:bg-dark-gray transition-colors">
+                  <button className="flex-1 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                     Learn More
                   </button>
-                  <button className="flex-1 py-3 bg-gold text-primary rounded-lg font-semibold hover:bg-yellow-500 transition-colors">
+                  <button className="flex-1 py-3 bg-orange-400 text-white rounded-lg font-semibold hover:bg-orange-500 transition-colors">
                     Get Directions
                   </button>
                 </div>
