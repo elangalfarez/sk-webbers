@@ -59,28 +59,72 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
         </div>
         
-        {/* Main Content Container - Fixed Positioning */}
-        <div className="relative z-10 w-full h-full">
-          {/* Content Area - Mobile Optimized, Desktop Compact */}
-          <div className="flex-1 px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-12 flex flex-col justify-center md:justify-start lg:justify-center relative z-20 md:max-w-2xl lg:max-w-3xl">
-            <div className="space-y-3 sm:space-y-4 md:space-y-4 lg:space-y-6">
-              {/* Typography - Mobile Optimized, Desktop Compact */}
-              <div className="space-y-2 sm:space-y-3 md:space-y-3 lg:space-y-4">
-                <p className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg text-gray-300 leading-relaxed opacity-90">
+        {/* Main Content Container - Hybrid Layout */}
+        <div className="relative z-10 w-full h-full flex">
+          
+          {/* LEFT PART - Desktop: Exact Previous Iteration */}
+          <div className="hidden md:flex flex-1 max-w-3xl px-4 sm:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 lg:py-8 flex-col justify-center">
+            <div className="space-y-4 sm:space-y-6 md:space-y-8 pt-4 sm:pt-6 lg:pt-0">
+              <div className="space-y-3 sm:space-y-4 md:space-y-6">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed opacity-90">
                   Your Shopping, Culinary, & Entertainment Destination
                 </p>
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
-                  Welcome to <br className="hidden sm:block"/> 
-                  <span className="text-orange-400">Supermal Karawaci</span>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+                  Welcome to <br/>
+                  <span className="text-orange-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Supermal Karawaci</span>
                 </h1>
               </div>
+              
+              <div className="space-y-4 sm:space-y-6 mt-8 lg:mt-12">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">What's On</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-4xl">
+                  {whatsOnCards.map((event) => (
+                    <div
+                      key={event.id}
+                      onClick={() => openEventModal(event)}
+                      className="relative bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer hover:bg-black/50 transition-all duration-300 transform hover:scale-105 group border border-white/10"
+                    >
+                      <div className="aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] relative">
+                        <img 
+                          src={event.image}
+                          alt={event.title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+                        <div className="absolute top-3 left-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold">
+                          {event.category}
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h4 className="text-white font-semibold text-sm mb-2 line-clamp-2">{event.title}</h4>
+                        <p className="text-gray-300 text-xs opacity-75">{event.date}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
 
-              {/* What's On Section - Mobile Optimized, Desktop Compact */}
-              <div className="space-y-2 sm:space-y-3 md:space-y-3 lg:space-y-4 mt-4 sm:mt-6 md:mt-6 lg:mt-8">
-                <h3 className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-semibold text-white">What's On</h3>
-                
-                {/* Mobile: Text-only cards */}
-                <div className="block md:hidden">
+          {/* Mobile Only Layout */}
+          <div className="block md:hidden w-full">
+            <div className="px-4 sm:px-6 py-6 sm:py-8 flex flex-col justify-center relative z-20">
+              <div className="space-y-3 sm:space-y-4">
+                {/* Mobile Typography */}
+                <div className="space-y-2 sm:space-y-3">
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed opacity-90">
+                    Your Shopping, Culinary, & Entertainment Destination
+                  </p>
+                  <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight">
+                    Welcome to <br className="hidden sm:block"/> 
+                    <span className="text-orange-400">Supermal Karawaci</span>
+                  </h1>
+                </div>
+
+                {/* Mobile What's On Section */}
+                <div className="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
+                  <h3 className="text-base sm:text-lg font-semibold text-white">What's On</h3>
+                  
                   <div className="space-y-2">
                     {whatsOnCards.map((event) => (
                       <div
@@ -104,69 +148,42 @@ const Hero = () => {
                     ))}
                   </div>
                 </div>
-
-                {/* Desktop: Smaller, more compact image cards */}
-                <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-full">
-                  {whatsOnCards.map((event) => (
-                    <div
-                      key={event.id}
-                      onClick={() => openEventModal(event)}
-                      className="relative bg-black/40 backdrop-blur-sm rounded-lg md:rounded-xl overflow-hidden cursor-pointer hover:bg-black/50 transition-all duration-300 transform hover:scale-105 group border border-white/10 shadow-lg hover:shadow-xl"
-                    >
-                      <div className="aspect-[4/3] md:aspect-[3/2] relative">
-                        <img 
-                          src={event.image}
-                          alt={event.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                        <div className="absolute top-2 md:top-3 left-2 md:left-3 bg-yellow-400 text-black px-2 md:px-3 py-1 rounded-full text-xs font-bold shadow-md">
-                          {event.category}
-                        </div>
-                      </div>
-                      <div className="p-3 md:p-4">
-                        <h4 className="text-white font-semibold text-xs md:text-sm mb-1 md:mb-2 line-clamp-2">{event.title}</h4>
-                        <p className="text-gray-300 text-xs opacity-75">{event.date}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
-          </div>
 
-          {/* Mobile Models Layout */}
-          <div className="block md:hidden relative h-64 sm:h-80 flex items-end justify-center mt-6">
-            <img 
-              src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
-              alt="Supermal Karawaci Models"
-              className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105"
-              style={{
-                height: '100%',
-                width: 'auto',
-                transformOrigin: 'bottom center',
-                maxWidth: '100%',
-                maxHeight: '100%'
-              }}
-            />
-          </div>
-
-          {/* Desktop Models - Fixed to Right Side */}
-          <div className="hidden md:block absolute top-0 right-0 bottom-0 w-80 lg:w-96 xl:w-[26rem] 2xl:w-[30rem] overflow-visible z-10">
-            <div className="relative w-full h-full flex items-end justify-end">
+            {/* Mobile Models */}
+            <div className="relative h-64 sm:h-80 flex items-end justify-center mt-6">
               <img 
                 src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                 alt="Supermal Karawaci Models"
-                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-110 md:translate-x-8 lg:translate-x-12 xl:translate-x-16 2xl:translate-x-20"
+                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105"
                 style={{
                   height: '100%',
                   width: 'auto',
                   transformOrigin: 'bottom center',
-                  maxWidth: 'none',
+                  maxWidth: '100%',
                   maxHeight: '100%'
                 }}
               />
             </div>
+          </div>
+        </div>
+
+        {/* RIGHT PART - Desktop: Exact Previous Iteration */}
+        <div className="absolute right-0 bottom-0 w-3/5 h-full hidden lg:block overflow-visible">
+          <div className="relative w-full h-full flex items-end justify-end">
+            <img 
+              src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
+              alt="Supermal Karawaci Models"
+              className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 lg:translate-x-16 xl:translate-x-20 2xl:translate-x-24"
+              style={{
+                height: '100%',
+                width: 'auto',
+                transformOrigin: 'bottom center',
+                maxWidth: 'none',
+                maxHeight: '100%'
+              }}
+            />
           </div>
         </div>
         
