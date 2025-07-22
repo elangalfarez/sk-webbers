@@ -69,6 +69,7 @@ const Hero = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                   Welcome to <br/>
                   <span className="text-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Supermal Karawaci</span>
+                  <br/>
                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed opacity-90">
                   Your Shopping, Culinary, & Entertainment Destination
                 </p>
