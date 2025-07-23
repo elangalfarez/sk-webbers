@@ -75,7 +75,7 @@ const Hero = () => {
                 </p>
               </div>
               
-              <div className="space-y-4 sm:space-y-6 mt-16 lg:mt-20">
+              <div className="space-y-4 sm:space-y-6 mt-20 lg:mt-20">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">What's On</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-4xl">
                   {whatsOnCards.map((event) => (
