@@ -159,9 +159,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                    {event.description}
-                  </p>
+                  <div className="mt-4">
                   
                   <button className="w-full py-3 bg-primary border border-gold text-white rounded-lg font-semibold hover:bg-dark-gray transition-colors">
                     Learn More
