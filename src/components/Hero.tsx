@@ -64,7 +64,7 @@ const Hero = () => {
           
           {/* LEFT PART - Desktop: Exact Previous Iteration with Lower Positioning */}
           <div className="hidden md:flex flex-1 max-w-3xl px-4 sm:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 lg:py-8 flex-col justify-center">
-            <div className="space-y-4 sm:space-y-6 md:space-y-8 pt-8 sm:pt-12 lg:pt-16 xl:pt-20">
+            <div className="space-y-4 sm:space-y-6 md:space-y-8 pt-16 sm:pt-20 lg:pt-24 xl:pt-28">
               <div className="space-y-3 sm:space-y-4 md:space-y-6">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                   Welcome to <br/>
@@ -75,7 +75,7 @@ const Hero = () => {
                 </p>
               </div>
               
-              <div className="space-y-4 sm:space-y-6 mt-8 lg:mt-12">
+              <div className="space-y-4 sm:space-y-6 mt-12 lg:mt-16">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">What's On</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-4xl">
                   {whatsOnCards.map((event) => (
