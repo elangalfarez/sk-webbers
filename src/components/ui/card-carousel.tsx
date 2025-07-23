@@ -165,6 +165,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                     Learn More
                   </button>
                 </div>
+                </div>
               </div>
             </SwiperSlide>
           ))}
