@@ -19,7 +19,7 @@ export default {
         'black-600': '#1F2937',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Figtree', 'sans-serif'],
       },
       flex: {
         '2': '2 2 0%',

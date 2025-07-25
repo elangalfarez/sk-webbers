@@ -230,7 +230,7 @@ const Hero = () => {
             {/* Title and Subtitle - Higher Position */}
             <div className="absolute top-1/3 left-4 sm:left-6 lg:left-8 xl:left-12 transform -translate-y-1/2 max-w-2xl z-20">
               <div className="space-y-3 sm:space-y-4 md:space-y-6">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight outfit-title">
                   Welcome to <br/>
                   <span className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Supermal Karawaci</span>
                 </h1>
@@ -321,98 +321,106 @@ const Hero = () => {
 
           {/* MOBILE LAYOUT */}
           <div className="block md:hidden h-full">
-            {/* Title and Subtitle - Higher Position */}
-            <div className="absolute top-20 left-4 right-4 z-20">
-              <div className="space-y-3 sm:space-y-4">
-                <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
-                  Welcome to <br/> 
-                  <span className="text-gold">Supermal Karawaci</span>
-                </h1>
-                <p className="text-sm sm:text-base text-gray-300 leading-relaxed opacity-90">
-                  Your Shopping, Culinary, & Entertainment Destination
-                </p>
-              </div>
-            </div>
+            {/* Title, Subtitle and What's On Section - Repositioned */}
+            <div className="absolute top-24 left-4 right-4 z-20">
+              <div className="space-y-4 sm:space-y-6">
+                {/* Title and Subtitle */}
+                <div className="space-y-3">
+                  <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight outfit-title">
+                    Welcome to <br/> 
+                    <span className="text-gold">Supermal Karawaci</span>
+                  </h1>
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed opacity-90">
+                    Your Shopping, Culinary, & Entertainment Destination
+                  </p>
+                </div>
 
-            {/* What's On Section - Bottom */}
-            <div className="absolute bottom-24 left-4 right-4 z-20">
-              <div className="space-y-3">
-                <h3 className="text-lg sm:text-xl font-semibold text-white">What's On</h3>
-                
-                {/* Mobile Touch Slider */}
-                <div className="relative">
-                  <div 
-                    ref={mobileContainerRef}
-                    className="overflow-hidden select-none"
-                    onTouchStart={handleMobileTouchStart}
-                    onTouchMove={handleMobileTouchMove}
-                    onTouchEnd={handleMobileTouchEnd}
-                  >
+                {/* What's On Section - Now positioned after subtitle */}
+                <div className="space-y-3">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">What's On</h3>
+                  
+                  {/* Mobile Touch Slider - Improved responsiveness */}
+                  <div className="relative">
                     <div 
-                      ref={mobileSliderRef}
-                      className="flex transition-transform duration-500 ease-out"
-                      style={{ 
-                        transform: `translateX(-${currentMobileSlide * (100 / maxMobileSlides)}%)`,
-                        width: `${maxMobileSlides * 100}%`
-                      }}
+                      ref={mobileContainerRef}
+                      className="overflow-hidden select-none"
+                      onTouchStart={handleMobileTouchStart}
+                      onTouchMove={handleMobileTouchMove}
+                      onTouchEnd={handleMobileTouchEnd}
                     >
-                      {Array.from({ length: maxMobileSlides }).map((_, slideIndex) => (
-                        <div
-                          key={slideIndex}
-                          className="flex-none"
-                          style={{ width: `${100 / maxMobileSlides}%` }}
-                        >
-                          <div className="space-y-1 px-1">
-                            {getVisibleCards(slideIndex, mobileVisibleCards).map((event, cardIndex) => (
-                              <div
-                                key={`mobile-${event.id}-${slideIndex}-${cardIndex}`}
-                                onClick={() => !isDragging && openEventModal(event)}
-                                className="bg-black/40 backdrop-blur-sm rounded-lg p-3 cursor-pointer hover:bg-black/50 transition-all duration-300 border border-white/10"
-                              >
-                                <div className="flex items-center justify-between">
-                                  <div className="flex-1">
-                                    <div className="bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded-full w-fit mb-2">
+                      <div 
+                        ref={mobileSliderRef}
+                        className="flex transition-transform duration-500 ease-out"
+                        style={{ 
+                          transform: `translateX(-${currentMobileSlide * (100 / maxMobileSlides)}%)`,
+                          width: `${maxMobileSlides * 100}%`
+                        }}
+                      >
+                        {Array.from({ length: maxMobileSlides }).map((_, slideIndex) => (
+                          <div
+                            key={slideIndex}
+                            className="flex-none"
+                            style={{ width: `${100 / maxMobileSlides}%` }}
+                          >
+                            <div className="flex space-x-2 px-1">
+                              {getVisibleCards(slideIndex, mobileVisibleCards).map((event, cardIndex) => (
+                                <div
+                                  key={`mobile-${event.id}-${slideIndex}-${cardIndex}`}
+                                  onClick={() => !isDragging && openEventModal(event)}
+                                  className="flex-1 bg-black/40 backdrop-blur-sm rounded-lg overflow-hidden cursor-pointer hover:bg-black/50 transition-all duration-300 border border-white/10 min-w-0"
+                                >
+                                  {/* Card Image */}
+                                  <div className="aspect-[4/3] relative">
+                                    <img 
+                                      src={event.image}
+                                      alt={event.title}
+                                      className="w-full h-full object-cover"
+                                      draggable={false}
+                                    />
+                                    <div className="absolute inset-0 bg-black/30"></div>
+                                    <div className="absolute top-2 left-2 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
                                       {event.category}
                                     </div>
-                                    <h4 className="text-white font-semibold text-sm mb-1">{event.title}</h4>
+                                  </div>
+                                  
+                                  {/* Card Content */}
+                                  <div className="p-3">
+                                    <h4 className="text-white font-semibold text-sm mb-1 line-clamp-2">{event.title}</h4>
                                     <p className="text-gray-300 text-xs opacity-75">{event.date}</p>
                                   </div>
-                                  <div className="text-gold ml-4">
-                                    <ChevronRight className="w-5 h-5" />
-                                  </div>
                                 </div>
-                              </div>
-                            ))}
+                              ))}
+                            </div>
                           </div>
-                        </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Mobile Pagination - Improved spacing */}
+                    <div className="flex justify-center mt-3 space-x-2">
+                      {Array.from({ length: maxMobileSlides }).map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentMobileSlide(index)}
+                          className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                            index === currentMobileSlide 
+                              ? 'bg-yellow-400 w-4' 
+                              : 'bg-white/30 hover:bg-white/50'
+                          }`}
+                        />
                       ))}
                     </div>
-                  </div>
-                  
-                  {/* Mobile Pagination */}
-                  <div className="flex justify-center mt-1 space-x-2">
-                    {Array.from({ length: maxMobileSlides }).map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentMobileSlide(index)}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          index === currentMobileSlide 
-                            ? 'bg-yellow-400 w-4' 
-                            : 'bg-white/30 hover:bg-white/50'
-                        }`}
-                      />
-                    ))}
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Mobile Models - Bottom Fixed Position */}
-            <div className="absolute bottom-0 left-0 right-0 h-80 sm:h-96 flex items-end justify-center">
+            {/* Mobile Models - Adjusted position to accommodate cards */}
+            <div className="absolute bottom-0 left-0 right-0 h-96 sm:h-112 flex items-end justify-center">
               <img 
                 src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                 alt="Supermal Karawaci Models"
-                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 max-w-full"
+                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 max-w-full opacity-80"
                 style={{
                   height: '100%',
                   width: 'auto',
@@ -430,13 +438,21 @@ const Hero = () => {
             <img 
               src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
               alt="Supermal Karawaci Models"
-              className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 lg:translate-x-16 xl:translate-x-20 2xl:translate-x-24"
+              className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 active:scale-110 cursor-pointer lg:translate-x-16 xl:translate-x-20 2xl:translate-x-24"
               style={{
                 height: '100%',
                 width: 'auto',
                 transformOrigin: 'bottom center',
                 maxWidth: 'none',
                 maxHeight: '100%'
+              }}
+              onClick={(e) => {
+                // Add click animation effect
+                const target = e.currentTarget as HTMLElement;
+                target.style.transform = 'scale(1.1) translateX(16px)';
+                setTimeout(() => {
+                  target.style.transform = '';
+                }, 300);
               }}
               draggable={false}
             />
@@ -512,7 +528,7 @@ const Hero = () => {
       )}
 
       {/* Custom CSS */}
-      <style jsx>{`
+      <style>{`
         .text-gold {
           color: #fbbf24;
         }
