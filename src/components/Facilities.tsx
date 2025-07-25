@@ -139,13 +139,13 @@ const Facilities = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section className="py-12 md:py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Our <span className="text-gold">Facilities</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white-600 max-w-2xl mx-auto">
             Everything you need for a comfortable shopping experience
           </p>
         </div>

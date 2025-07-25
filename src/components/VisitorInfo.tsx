@@ -53,13 +53,13 @@ const VisitorInfo = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-light-gray">
+    <section className="py-12 md:py-20 bg-onyx-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Visitor <span className="text-gold">Information</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white-600 max-w-2xl mx-auto">
             Everything you need to know for a perfect visit
           </p>
         </div>
