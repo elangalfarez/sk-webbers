@@ -214,7 +214,7 @@ const Hero = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Design-SK.png"
+            src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/NEW-FACADE-WORKING-FILE-scaled.png"
             alt="Supermal Karawaci Interior"
             className="w-full h-full object-cover"
           />
