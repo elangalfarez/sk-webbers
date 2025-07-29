@@ -137,101 +137,108 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-primary/95 backdrop-blur-md shadow-lg border-b border-gold/20'
-          : 'bg-primary shadow-sm'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <img
-              src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/LOGO-SK-Tulisan-Putih-scaled.png"
-              alt="Supermal Karawaci"
-              className="h-16 w-auto"
-            />
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-primary/95 backdrop-blur-md shadow-lg'
+            : 'bg-primary shadow-sm'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <div className="flex-shrink-0 flex items-center">
+              <img
+                src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/LOGO-SK-Tulisan-Putih-scaled.png"
+                alt="Supermal Karawaci"
+                className="h-16 w-auto"
+              />
+            </div>
+
+            {/* Desktop Mega Menu */}
+            <div className="hidden lg:flex items-center justify-center flex-1">
+              <MegaMenu items={megaMenuItems} className="font-medium" />
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden flex justify-end">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-white hover:text-gold transition-colors duration-200"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </button>
+            </div>
           </div>
 
-          {/* Desktop Mega Menu */}
-          <div className="hidden lg:flex items-center justify-center flex-1">
-            <MegaMenu items={megaMenuItems} className="font-medium" />
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden flex justify-end">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-gold transition-colors duration-200"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <div
-          className={`lg:hidden transition-all duration-300 overflow-hidden ${
-            isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          }`}
-        >
-          <div className="py-4 space-y-2 border-t border-gold/20">
-            {mobileMenuItems.map((item) => (
-              <div key={item.name}>
-                {item.submenu ? (
-                  <div>
-                    <button
-                      onClick={() => handleDropdownToggle(item.name)}
-                      className="flex items-center justify-between w-full text-left px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors duration-200 rounded-lg"
-                      className="flex items-center justify-between w-full text-left px-4 py-2 text-white hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
+          {/* Mobile Menu */}
+          <div
+            className={`lg:hidden transition-all duration-300 overflow-hidden ${
+              isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <div className="py-4 space-y-2 border-t border-gold/20">
+              {mobileMenuItems.map((item) => (
+                <div key={item.name}>
+                  {item.submenu ? (
+                    <div>
+                      <button
+                        onClick={() => handleDropdownToggle(item.name)}
+                        className="flex items-center justify-between w-full text-left px-4 py-2 text-white hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
+                      >
+                        {item.name}
+                        <ChevronDown
+                          className={`h-4 w-4 transition-transform duration-200 ${
+                            activeDropdown === item.name ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      
+                      {/* Mobile Submenu */}
+                      <div
+                        className={`ml-4 mt-1 space-y-1 transition-all duration-200 ${
+                          activeDropdown === item.name
+                            ? 'max-h-32 opacity-100'
+                            : 'max-h-0 opacity-0 overflow-hidden'
+                        }`}
+                      >
+                        {item.submenu.map((subItem) => (
+                          <a
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-2 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
+                          >
+                            {subItem.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className="block px-4 py-2 text-white hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
                     >
                       {item.name}
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-                    
-                    {/* Mobile Submenu */}
-                    <div
-                      className={`ml-4 mt-1 space-y-1 transition-all duration-200 ${
-                        activeDropdown === item.name
-                          ? 'max-h-32 opacity-100'
-                          : 'max-h-0 opacity-0 overflow-hidden'
-                      }`}
-                    >
-                      {item.submenu.map((subItem) => (
-                        <a
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
-                        >
-                          {subItem.name}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <a
-                    href={item.href}
-                    className="block px-4 py-2 text-white hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
-                  >
-                    {item.name}
-                  </a>
-                )}
-              </div>
-            ))}
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      </nav>
+
+      {/* Gold decorative lines under navbar */}
+      <div className="fixed top-20 left-0 right-0 z-40">
+        <div className="h-1 bg-gradient-to-r from-gold via-yellow-400 to-gold"></div>
+        <div className="h-0.5 bg-gold/60"></div>
       </div>
-    </nav>
+    </>
   );
 };
 

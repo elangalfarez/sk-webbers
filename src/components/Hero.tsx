@@ -17,33 +17,33 @@ const Hero = () => {
   const whatsOnCards = [
     {
       id: 1,
-      title: "Baba Lili Tata Beach Party",
-      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-06-28-at-15.10.14_4261ce1f-scaled.jpg",
-      date: "12 June - 13 Jul 2025",
+      title: "Pets Nation Festival Vol. 2",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-27-at-13.03.02_01a994d1-scaled.jpg",
+      date: "22 July - 10 August 2025",
       time: "10:00 AM - 10:00 PM",
-      location: "Ground Floor, Grand Atrium",
-      description: "Baba Lili Tata 1st Live Show in Jabodetabek. Join us for an exciting beach-themed party with live performances, games, and entertainment for the whole family.",
-      category: "Kids Entertainment"
+      location: "Upper Ground, Kids Atrium",
+      description: "Pets Nation Festival back with more exciting tenants and activities.",
+      category: "Event"
     },
     {
       id: 2,
-      title: "Gramedia Back to School",
-      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-06-17-at-16.11.23_8471f426-scaled.jpg",
-      date: "17 June - 13 July 2025",
+      title: "Shark & Ninja",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-18-at-17.36.31_8c15717a-scaled.jpg",
+      date: "July 2025",
       time: "10:00 AM - 10:00 PM",
-      location: "Upper Ground, Kids Atrium",
+      location: "East Corridor",
       description: "Get ready for the new school year with our comprehensive back-to-school collection. Find everything from stationeries, books, and school supplies for your kids.",
-      category: "Shopping"
+      category: "New Tenant"
     },
     {
       id: 3,
-      title: "Gramedia Big Sale",
+      title: "Pandora",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-14.42.40_d70e7702-scaled.jpg",
-      date: "1 - 27 July 2025",
+      date: "July 2025",
       time: "10:00 AM - 10:00 PM",
-      location: "First Floor, East Dome",
+      location: "Center Corridor",
       description: "Don't miss our biggest sale of the year! Get up to 70% discount on stationery and book supplies. Perfect time to stock up on your favorite items.",
-      category: "Sale"
+      category: "New Tenant"
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ const Hero = () => {
       time: "11:00 AM - 9:00 PM",
       location: "Second Floor, Fashion District",
       description: "Discover the latest summer fashion trends with exclusive collections from top brands and local designers.",
-      category: "Fashion"
+      category: "Event"
     },
     {
       id: 5,
@@ -63,7 +63,7 @@ const Hero = () => {
       time: "12:00 PM - 10:00 PM",
       location: "Food Court Area",
       description: "Taste the best culinary delights from around the world with special prices and new menu launches.",
-      category: "Culinary"
+      category: "Event"
     }
   ];
 
@@ -214,7 +214,7 @@ const Hero = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/NEW-FACADE-WORKING-FILE-scaled.png"
+            src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Update-Facade-1-scaled.png"
             alt="Supermal Karawaci Interior"
             className="w-full h-full object-cover"
           />
@@ -274,7 +274,7 @@ const Hero = () => {
                               <div
                                 key={`${event.id}-${slideIndex}-${cardIndex}`}
                                 onClick={() => !isDragging && openEventModal(event)}
-                                className="relative bg-black/40 backdrop-blur-sm rounded-xl overflow-hidden cursor-pointer hover:bg-black/50 transition-all duration-300 transform hover:scale-105 group border border-white/10 w-60"
+                                className="relative bg-black/40 backdrop-blur-sm rounded-xl overflow-hidden cursor-pointer hover:bg-black/50 transition-all duration-300 transform hover:scale-105 group border border-white/10 w-52"
                               >
                                 <div className="aspect-[4/3] relative">
                                   <img 
@@ -420,7 +420,7 @@ const Hero = () => {
               <img 
                 src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
                 alt="Supermal Karawaci Models"
-                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 max-w-full opacity-80"
+                className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 max-w-full opacity-100"
                 style={{
                   height: '100%',
                   width: 'auto',
@@ -433,14 +433,13 @@ const Hero = () => {
         </div>
 
         {/* RIGHT PART - Desktop: Models */}
-        <div className="absolute right-0 bottom-0 w-2/5 lg:w-1/2 xl:w-3/5 h-full hidden lg:block overflow-visible">
+        <div className="absolute right-0 bottom-0 w-2/5 lg:w-1/2 xl:w-3/5 h-[90vh] hidden lg:block overflow-visible">
           <div className="relative w-full h-full flex items-end justify-end">
             <img 
               src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Model-2-Rev1.png"
               alt="Supermal Karawaci Models"
-              className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 active:scale-110 cursor-pointer lg:translate-x-16 xl:translate-x-20 2xl:translate-x-24"
+              className="object-contain object-bottom transition-transform duration-700 ease-out hover:scale-105 active:scale-115 cursor-pointer lg:translate-x-12 xl:translate-x-16 2xl:translate-x-20 h-auto max-h-[60vh]"
               style={{
-                height: '100%',
                 width: 'auto',
                 transformOrigin: 'bottom center',
                 maxWidth: 'none',
