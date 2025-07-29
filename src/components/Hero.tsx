@@ -58,7 +58,7 @@ const Hero = () => {
     {
       id: 5,
       title: "Diamond & Co.",
-      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-14.42.40_d70e7702-scaled.jpg",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-15.39.07_066f85aa-scaled.jpg",
       date: "20 - 25 July 2025",
       time: "12:00 PM - 10:00 PM",
       location: "Food Court Area",
