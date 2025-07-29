@@ -32,37 +32,37 @@ const Hero = () => {
       date: "July 2025",
       time: "10:00 AM - 10:00 PM",
       location: "East Corridor",
-      description: "Get ready for the new school year with our comprehensive back-to-school collection. Find everything from stationeries, books, and school supplies for your kids.",
+      description: "Now Open! SHARK & NINJA — Premium cleaning tech meets powerful performance. Find us at Supermal Karawaci!",
       category: "New Tenant"
     },
     {
       id: 3,
-      title: "Pandora",
-      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-14.42.40_d70e7702-scaled.jpg",
+      title: "Birkenstock",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-15.39.07_b7a7e03a-scaled.jpg",
       date: "July 2025",
       time: "10:00 AM - 10:00 PM",
       location: "Center Corridor",
-      description: "Don't miss our biggest sale of the year! Get up to 70% discount on stationery and book supplies. Perfect time to stock up on your favorite items.",
+      description: "Now Open! 👣 BIRKENSTOCK — Iconic comfort and timeless style. Step into effortless fashion at Supermal Karawaci!",
       category: "New Tenant"
     },
     {
       id: 4,
-      title: "Summer Fashion Week",
-      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-06-28-at-15.10.14_4261ce1f-scaled.jpg",
+      title: "Steve Madden",
+      image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-25-at-16.15.28_8c3a7163-scaled.jpg",
       date: "15 - 30 July 2025",
       time: "11:00 AM - 9:00 PM",
       location: "Second Floor, Fashion District",
-      description: "Discover the latest summer fashion trends with exclusive collections from top brands and local designers.",
-      category: "Event"
+      description: "Now Open! 👠 STEVE MADDEN — Bold, trendy, and always iconic. Elevate your style at Supermal Karawaci!",
+      category: "New Tenant"
     },
     {
       id: 5,
-      title: "Food Festival",
+      title: "Diamond & Co.",
       image: "https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-02-at-14.42.40_d70e7702-scaled.jpg",
       date: "20 - 25 July 2025",
       time: "12:00 PM - 10:00 PM",
       location: "Food Court Area",
-      description: "Taste the best culinary delights from around the world with special prices and new menu launches.",
+      description: "Exquisite, Classy, and Timeless Modern Jewelry. Visit us at Supermal Karawaci!",
       category: "Event"
     }
   ];
