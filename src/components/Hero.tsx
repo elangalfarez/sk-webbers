@@ -63,7 +63,7 @@ const Hero = () => {
       time: "12:00 PM - 10:00 PM",
       location: "Food Court Area",
       description: "Exquisite, Classy, and Timeless Modern Jewelry. Visit us at Supermal Karawaci!",
-      category: "Event"
+      category: "New Tenant"
     }
   ];
 
