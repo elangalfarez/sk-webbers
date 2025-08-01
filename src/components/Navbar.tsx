@@ -165,7 +165,7 @@ const Navbar = () => {
             <div className="lg:hidden flex justify-end">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-white hover:text-gold transition-colors duration-200"
+                className="text-white hover:text-royal-purple transition-colors duration-200"
               >
                 {isMobileMenuOpen ? (
                   <X className="h-6 w-6" />
@@ -182,14 +182,14 @@ const Navbar = () => {
               isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="py-4 space-y-2 border-t border-gold/20">
+            <div className="py-4 space-y-2 border-t border-royal-purple/30">
               {mobileMenuItems.map((item) => (
                 <div key={item.name}>
                   {item.submenu ? (
                     <div>
                       <button
                         onClick={() => handleDropdownToggle(item.name)}
-                        className="flex items-center justify-between w-full text-left px-4 py-2 text-white hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
+                        className="flex items-center justify-between w-full text-left px-4 py-2 text-white hover:bg-royal-purple/10 hover:text-royal-purple transition-colors duration-200 rounded-lg"
                       >
                         {item.name}
                         <ChevronDown
@@ -211,7 +211,7 @@ const Navbar = () => {
                           <a
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-300 hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
+                            className="block px-4 py-2 text-sm text-light-gray hover:bg-royal-purple/10 hover:text-gold transition-colors duration-200 rounded-lg"
                           >
                             {subItem.name}
                           </a>
@@ -221,7 +221,7 @@ const Navbar = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className="block px-4 py-2 text-white hover:bg-gold/10 hover:text-gold transition-colors duration-200 rounded-lg"
+                      className="block px-4 py-2 text-white hover:bg-royal-purple/10 hover:text-gold transition-colors duration-200 rounded-lg"
                     >
                       {item.name}
                     </a>

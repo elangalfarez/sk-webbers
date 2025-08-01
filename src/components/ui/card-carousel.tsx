@@ -66,35 +66,6 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   .swiper-3d .swiper-slide-shadow-right{
     background: none;
   }
-  
-  .swiper-slide:not(.swiper-slide-active) {
-    position: relative;
-  }
-  
-  .swiper-slide:not(.swiper-slide-active)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    border-radius: 16px;
-    z-index: 10;
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-  
-  .swiper-slide:not(.swiper-slide-active) .bg-white {
-    filter: blur(1px);
-    transition: filter 0.3s ease;
-  }
-  
-  .swiper-slide-active .bg-white {
-    filter: blur(0px);
-  }
   `
   return (
     <div className="w-full">
@@ -130,20 +101,20 @@ export const CardCarousel: React.FC<CarouselProps> = ({
         >
           {events.map((event, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-full">
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-royal-purple/20 overflow-hidden h-full transition-all duration-300 hover:scale-105">
                 <div className="relative">
                   <img
                     src={event.image}
                     alt={event.title}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-gold text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute top-4 left-4 bg-royal-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg shadow-royal-purple/30">
                     {event.category}
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">
+                  <h3 className="text-xl font-bold text-chinese-black mb-3">
                     {event.title}
                   </h3>
                   
@@ -161,7 +132,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                   
                   <div className="mt-4">
                   
-                  <button className="w-full py-3 bg-primary border border-gold text-white rounded-lg font-semibold hover:bg-dark-gray transition-colors">
+                  <button className="w-full py-3 bg-royal-purple border border-gold text-white rounded-lg font-semibold hover:bg-dark-purple hover:shadow-lg hover:shadow-gold/20 transition-all duration-300">
                     Learn More
                   </button>
                 </div>

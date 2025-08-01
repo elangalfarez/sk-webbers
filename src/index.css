@@ -11,13 +11,34 @@
     background: #121421;
   }
   
-  .btn-luxury {
+  /* Custom scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
     background: #121421;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FFD700;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+  }
+  
+  .btn-luxury {
+    background: #5A2E8A;
     border: 1px solid #D4AF37;
+    color: white;
   }
   
   .btn-luxury:hover {
-    background: #1F2937;
+    background: #4A256F;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
   }
   
   .scrollbar-hide::-webkit-scrollbar {

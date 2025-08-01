@@ -5,12 +5,14 @@ export default {
     extend: {
       colors: {
         primary: '#121421',
+        'royal-purple': '#5A2E8A',
+        'dark-purple': '#4A256F',
         secondary: '#D4AF37',
+        gold: '#D4AF37',
         accent: '#1F2937',
-        'gold': '#D4AF37',
         'dark-gray': '#1F2937',
-        'light-gray': '#F8FAFC',
-        'chinese-black': '#101010',
+        'light-gray': '#CCCCCC',
+        'chinese-black': '#121421',
         'charcoal': '#333333',
         'gunmetal': '#2A3439',
         'white-600': '#F3F4F6',

@@ -45,7 +45,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
             onMouseLeave={() => handleHover(null)}
           >
             <button
-              className="relative flex cursor-pointer items-center justify-center gap-1 py-1.5 px-4 text-sm text-white transition-colors duration-300 hover:text-gold group"
+              className="relative flex cursor-pointer items-center justify-center gap-1 py-1.5 px-4 text-sm text-white transition-colors duration-300 hover:text-royal-purple group"
               onMouseEnter={() => setIsHover(navItem.id)}
               onMouseLeave={() => setIsHover(null)}
             >
@@ -60,7 +60,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
               {(isHover === navItem.id || openMenu === navItem.label) && (
                 <motion.div
                   layoutId="hover-bg"
-                  className="absolute inset-0 size-full bg-gold/20"
+                  className="absolute inset-0 size-full bg-royal-purple/20"
                   style={{
                     borderRadius: 99,
                   }}
@@ -72,7 +72,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
               {openMenu === navItem.label && navItem.subMenus && (
                 <div className={`absolute ${navItem.label === 'Contact' ? 'right-0' : 'left-0'} top-full w-auto pt-2 z-10`}>
                   <motion.div
-                    className="w-max border border-gold/20 bg-primary/95 backdrop-blur-md p-6 shadow-xl"
+                    className="w-max border border-royal-purple/30 bg-primary/95 backdrop-blur-md p-6 shadow-xl"
                     style={{
                       borderRadius: 16,
                     }}
@@ -85,7 +85,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                     <div className="flex w-fit shrink-0 space-x-9 overflow-hidden">
                       {navItem.subMenus.map((sub) => (
                         <motion.div layout className="w-full min-w-[200px]" key={sub.title}>
-                          <h3 className="mb-4 text-sm font-semibold text-gold">
+                          <h3 className="mb-4 text-sm font-semibold text-royal-purple">
                             {sub.title}
                           </h3>
                           <ul className="space-y-3">
@@ -95,16 +95,16 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                                 <li key={item.label}>
                                   <a
                                     href="#"
-                                    className="flex items-start space-x-3 group p-2 rounded-lg hover:bg-gold/10 transition-colors duration-200"
+                                    className="flex items-start space-x-3 group p-2 rounded-lg hover:bg-royal-purple/10 transition-colors duration-200"
                                   >
-                                    <div className="flex size-8 shrink-0 items-center justify-center rounded-md bg-gold/20 text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-primary">
+                                    <div className="flex size-8 shrink-0 items-center justify-center rounded-md bg-royal-purple/20 text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-black">
                                       <Icon className="h-4 w-4 flex-none" />
                                     </div>
                                     <div className="w-max leading-5">
                                       <p className="shrink-0 text-sm font-medium text-white">
                                         {item.label}
                                       </p>
-                                      <p className="shrink-0 text-xs text-gray-300 transition-colors duration-300 group-hover:text-gray-200">
+                                      <p className="shrink-0 text-xs text-light-gray transition-colors duration-300 group-hover:text-white">
                                         {item.description}
                                       </p>
                                     </div>
