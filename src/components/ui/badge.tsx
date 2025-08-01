@@ -11,7 +11,7 @@ const badgeVariants = cva(
         default:
           "border-transparent bg-royal-purple text-white hover:bg-dark-purple shadow-lg shadow-royal-purple/20",
         secondary:
-          "border-transparent bg-gold text-black hover:bg-gold/80 shadow-lg shadow-gold/30",
+          "border-transparent bg-royal-purple text-white hover:bg-dark-purple shadow-lg shadow-royal-purple/30",
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "border-royal-purple text-royal-purple hover:bg-royal-purple hover:text-white",

@@ -32,13 +32,12 @@
   
   .btn-luxury {
     background: #5A2E8A;
-    border: 1px solid #D4AF37;
     color: white;
   }
   
   .btn-luxury:hover {
     background: #4A256F;
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 25px rgba(90, 46, 138, 0.2);
   }
   
   .scrollbar-hide::-webkit-scrollbar {

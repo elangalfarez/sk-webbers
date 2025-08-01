@@ -211,7 +211,7 @@ const Navbar = () => {
                           <a
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-light-gray hover:bg-royal-purple/10 hover:text-gold transition-colors duration-200 rounded-lg"
+                            className="block px-4 py-2 text-sm text-light-gray hover:bg-royal-purple/10 hover:text-royal-purple transition-colors duration-200 rounded-lg"
                           >
                             {subItem.name}
                           </a>
@@ -221,7 +221,7 @@ const Navbar = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className="block px-4 py-2 text-white hover:bg-royal-purple/10 hover:text-gold transition-colors duration-200 rounded-lg"
+                      className="block px-4 py-2 text-white hover:bg-royal-purple/10 hover:text-royal-purple transition-colors duration-200 rounded-lg"
                     >
                       {item.name}
                     </a>
@@ -235,7 +235,7 @@ const Navbar = () => {
 
       {/* Gold decorative lines under navbar */}
       <div className="fixed top-20 left-0 right-0 z-40">
-        <div className="h-1 bg-gradient-to-r from-gold via-yellow-400 to-gold"></div>
+        <div className="h-1 bg-gradient-to-r from-gold via-gold to-gold"></div>
         <div className="h-0.5 bg-gold/60"></div>
       </div>
     </>

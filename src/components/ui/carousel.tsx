@@ -144,7 +144,7 @@ export const EventsCarousel = ({
     <div className="w-full overflow-hidden">
       <div
         ref={containerRef}
-        className="relative overflow-hidden p-4 rounded-2xl border border-gold/20 bg-primary/5"
+        className="relative overflow-hidden p-4 rounded-2xl border border-royal-purple/20 bg-primary/5"
         style={{
           width: `${baseWidth}px`,
           height: '500px',
@@ -192,7 +192,7 @@ export const EventsCarousel = ({
                     alt={item.title}
                     className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute top-4 left-4 bg-gold text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute top-4 left-4 bg-royal-purple text-primary px-3 py-1 rounded-full text-sm font-semibold">
                     {item.category}
                   </div>
                 </div>

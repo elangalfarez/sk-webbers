@@ -97,7 +97,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                                     href="#"
                                     className="flex items-start space-x-3 group p-2 rounded-lg hover:bg-royal-purple/10 transition-colors duration-200"
                                   >
-                                    <div className="flex size-8 shrink-0 items-center justify-center rounded-md bg-royal-purple/20 text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-black">
+                                    <div className="flex size-8 shrink-0 items-center justify-center rounded-md bg-royal-purple/20 text-royal-purple transition-colors duration-300 group-hover:bg-royal-purple group-hover:text-white">
                                       <Icon className="h-4 w-4 flex-none" />
                                     </div>
                                     <div className="w-max leading-5">

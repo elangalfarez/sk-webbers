@@ -73,7 +73,7 @@ const FeaturedTenants = () => {
                     className="w-full h-40 md:h-48 object-cover rounded-t-2xl"
                   />
                   {tenant.featured && (
-                    <div className="absolute top-4 right-4 bg-amber-400 text-black px-2 py-1 rounded-full text-sm font-semibold flex items-center">
+                    <div className="absolute top-4 right-4 bg-royal-purple text-white px-2 py-1 rounded-full text-sm font-semibold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
                       Now Open!
                     </div>

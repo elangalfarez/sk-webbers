@@ -52,7 +52,7 @@ const FoodDining = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Food & <span className="text-gold">Dining</span>
+            Culinary <span className="text-gold">Experiences</span>
           </h2>
           <p className="text-lg md:text-xl text-white-600 max-w-2xl mx-auto">
             From street snacks to fine dining - savor the best flavors all in one place
@@ -88,7 +88,7 @@ const FoodDining = () => {
                   <span className="text-sm">{restaurant.category}</span>
                 </div>
                 
-                <button className="w-full py-3 bg-primary border border-gold text-white rounded-lg font-semibold hover:bg-dark-gray hover:shadow-lg transition-all duration-300">
+                <button className="w-full py-3 bg-primary border border-primary text-white rounded-lg font-semibold hover:bg-royal-purple hover:shadow-lg transition-all duration-300">
                   View Menu
                 </button>
               </div>
@@ -97,7 +97,7 @@ const FoodDining = () => {
         </div>
         
         <div className="text-center mt-12">
-          <button className="px-6 md:px-8 py-3 md:py-4 bg-primary border border-gold text-white font-semibold rounded-full hover:bg-dark-gray hover:shadow-xl transform hover:scale-105 transition-all duration-300 shadow-lg text-sm md:text-base">
+          <button className="px-6 md:px-8 py-3 md:py-4 bg-primary text-white font-semibold rounded-full hover:bg-royal-purple hover:shadow-xl transform hover:scale-105 transition-all duration-300 shadow-lg text-sm md:text-base">
             Explore All Restaurants
           </button>
         </div>

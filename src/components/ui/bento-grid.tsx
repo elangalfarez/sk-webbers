@@ -45,7 +45,7 @@ const BentoCard = ({
     className={cn(
       "group relative col-span-1 flex flex-col justify-between overflow-hidden rounded-xl",
       // Dark mode styling with better visibility
-      "bg-primary border border-gold/20 shadow-xl",
+      "bg-primary border border-royal-purple/20 shadow-xl",
       className,
     )}
   >
@@ -63,7 +63,7 @@ const BentoCard = ({
         "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
       )}
     >
-      <Button variant="ghost" asChild size="sm" className="pointer-events-auto bg-gold/90 text-primary hover:bg-gold hover:text-primary font-semibold">
+      <Button variant="ghost" asChild size="sm" className="pointer-events-auto bg-royal-purple/90 text-white hover:bg-royal-purple hover:text-primary font-semibold">
         <a href={href}>
           {cta}
           <ArrowRightIcon className="ml-2 h-4 w-4" />

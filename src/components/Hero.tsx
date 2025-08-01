@@ -214,7 +214,7 @@ const Hero = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/07/Update-Facade-1-scaled.png"
+            src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/08/BESBEREVSI.jpg"
             alt="Supermal Karawaci Interior"
             className="w-full h-full object-cover"
           />
@@ -284,7 +284,7 @@ const Hero = () => {
                                     draggable={false}
                                   />
                                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-                                  <div className="absolute top-2 left-2 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
+                                  <div className="absolute top-2 left-2 bg-royal-purple text-white px-2 py-1 rounded-full text-xs font-bold">
                                     {event.category}
                                   </div>
                                 </div>
@@ -308,7 +308,7 @@ const Hero = () => {
                         onClick={() => setCurrentDesktopSlide(index)}
                         className={`w-2 h-2 rounded-full transition-all duration-300 ${
                           index === currentDesktopSlide 
-                            ? 'bg-yellow-400 w-6' 
+                            ? 'bg-gold w-6' 
                             : 'bg-white/30 hover:bg-white/50'
                         }`}
                       />
@@ -378,7 +378,7 @@ const Hero = () => {
                                       draggable={false}
                                     />
                                     <div className="absolute inset-0 bg-black/30"></div>
-                                    <div className="absolute top-2 left-2 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
+                                    <div className="absolute top-2 left-2 bg-gold text-black px-2 py-1 rounded-full text-xs font-bold">
                                       {event.category}
                                     </div>
                                   </div>
@@ -487,7 +487,7 @@ const Hero = () => {
                   className="w-full h-full object-cover rounded-t-2xl"
                 />
                 <div className="absolute inset-0 bg-black/40 rounded-t-2xl"></div>
-                <div className="absolute top-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
+                <div className="absolute top-4 left-4 bg-royal-purple text-white px-3 py-1 rounded-full text-sm font-bold">
                   {selectedEvent.category}
                 </div>
               </div>
@@ -497,15 +497,15 @@ const Hero = () => {
                 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center text-gray-600">
-                    <Calendar className="w-5 h-5 mr-3 text-gold" />
+                    <Calendar className="w-5 h-5 mr-3 text-royal-purple" />
                     <span>{selectedEvent.date}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <Clock className="w-5 h-5 mr-3 text-gold" />
+                    <Clock className="w-5 h-5 mr-3 text-royal-purple" />
                     <span>{selectedEvent.time}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <MapPin className="w-5 h-5 mr-3 text-gold" />
+                    <MapPin className="w-5 h-5 mr-3 text-royal-purple" />
                     <span>{selectedEvent.location}</span>
                   </div>
                 </div>
@@ -516,7 +516,7 @@ const Hero = () => {
                   <button className="flex-1 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                     Learn More
                   </button>
-                  <button className="flex-1 py-3 bg-gold text-white rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
+                  <button className="flex-1 py-3 bg-royal-purple text-white rounded-lg font-semibold hover:bg-gold transition-colors">
                     Get Directions
                   </button>
                 </div>

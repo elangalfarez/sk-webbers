@@ -9,7 +9,7 @@ const About = () => {
           {/* Image */}
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              src="https://supermalkarawaci.co.id/core/wp-content/uploads/2025/08/WhatsApp-Image-2025-07-27-at-16.38.41_7d7c30a9.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
               alt="Supermal Karawaci Exterior"
               className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-xl"
             />

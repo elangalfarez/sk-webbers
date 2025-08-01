@@ -15,12 +15,12 @@ function App() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <About />
       <FeaturedTenants />
       <Events />
       <FoodDining />
       <Facilities />
       <VisitorInfo />
+      <About />
       <Footer />
     </div>
   );
