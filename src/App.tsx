@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,12 +9,25 @@ import Facilities from './components/Facilities';
 import VisitorInfo from './components/VisitorInfo';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import TreasureHunt from './components/TreasureHunt';
+
+type Page = 'home' | 'treasure-hunt';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState<Page>('home');
+
+  const navigateToPage = (page: Page) => {
+    setCurrentPage(page);
+  };
+
+  if (currentPage === 'treasure-hunt') {
+    return <TreasureHunt />;
+  }
+
   return (
     <div className="min-h-screen">
-      <Navbar />
-      <Hero />
+      <Navbar onNavigate={navigateToPage} />
+      <Hero onNavigate={navigateToPage} />
       <FeaturedTenants />
       <Events />
       <FoodDining />

@@ -15,7 +15,11 @@ import {
 import MegaMenu from '@/components/ui/mega-menu';
 import type { MegaMenuItem } from '@/components/ui/mega-menu';
 
-const Navbar = () => {
+interface NavbarProps {
+  onNavigate?: (page: 'home' | 'treasure-hunt') => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -30,7 +34,7 @@ const Navbar = () => {
   }, []);
 
   const megaMenuItems: MegaMenuItem[] = [
-    { id: 1, label: 'Home', link: '#' },
+    { id: 1, label: 'Home', link: '#', onClick: () => onNavigate?.('home') },
     {
       id: 2,
       label: 'Directory',
@@ -78,10 +82,16 @@ const Navbar = () => {
         },
       ],
     },
-    { id: 4, label: 'VIP Card', link: '#' },
-    { id: 5, label: 'CSR', link: '#' },
+    { 
+      id: 4, 
+      label: '🎯 Treasure Hunt', 
+      link: '#', 
+      onClick: () => onNavigate?.('treasure-hunt')
+    },
+    { id: 5, label: 'VIP Card', link: '#' },
+    { id: 6, label: 'CSR', link: '#' },
     {
-      id: 6,
+      id: 7,
       label: 'Contact',
       subMenus: [
         {
@@ -109,7 +119,7 @@ const Navbar = () => {
   ];
 
   const mobileMenuItems = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '#', onClick: () => onNavigate?.('home') },
     {
       name: 'Directory',
       href: '#',
@@ -127,6 +137,7 @@ const Navbar = () => {
         { name: 'Events', href: '#' }
       ]
     },
+    { name: '🎯 Treasure Hunt', href: '#', onClick: () => onNavigate?.('treasure-hunt') },
     { name: 'VIP Card', href: '#' },
     { name: 'CSR', href: '#' },
     { name: 'Contact', href: '#' }
@@ -219,12 +230,17 @@ const Navbar = () => {
                       </div>
                     </div>
                   ) : (
-                    <a
-                      href={item.href}
-                      className="block px-4 py-2 text-white hover:bg-royal-purple/10 hover:text-royal-purple transition-colors duration-200 rounded-lg"
+                    <button
+                      onClick={() => {
+                        if ((item as any).onClick) {
+                          (item as any).onClick();
+                        }
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="block w-full text-left px-4 py-2 text-white hover:bg-royal-purple/10 hover:text-royal-purple transition-colors duration-200 rounded-lg"
                     >
                       {item.name}
-                    </a>
+                    </button>
                   )}
                 </div>
               ))}

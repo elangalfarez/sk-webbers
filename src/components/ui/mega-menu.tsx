@@ -15,6 +15,7 @@ export type MegaMenuItem = {
     }[];
   }[];
   link?: string;
+  onClick?: () => void;
 };
 
 export interface MegaMenuProps extends React.HTMLAttributes<HTMLUListElement> {
@@ -48,6 +49,13 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
               className="relative flex cursor-pointer items-center justify-center gap-1 py-1.5 px-4 text-sm text-white transition-colors duration-300 hover:text-royal-purple group"
               onMouseEnter={() => setIsHover(navItem.id)}
               onMouseLeave={() => setIsHover(null)}
+              onClick={() => {
+                if (navItem.onClick) {
+                  navItem.onClick();
+                } else if (navItem.link) {
+                  window.location.href = navItem.link;
+                }
+              }}
             >
               <span>{navItem.label}</span>
               {navItem.subMenus && (
