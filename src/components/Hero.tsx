@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight, X, Calendar, Clock, MapPin } from 'lucide-react';
 
-const Hero = () => {
+const Hero = ({ onNavigate }: { onNavigate?: (page: 'home' | 'treasure-hunt') => void }) => {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
   const [currentDesktopSlide, setCurrentDesktopSlide] = useState(0);
   const [currentMobileSlide, setCurrentMobileSlide] = useState(0);
@@ -462,6 +462,31 @@ const Hero = () => {
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
           <div className="w-6 h-10 border-2 border-gold/60 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-gold/80 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Treasure Hunt Banner */}
+      <section className="relative bg-gradient-to-r from-[#5A2E8A] to-[#4A256F] py-8">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-[#D4AF37] rounded-full mb-4">
+              <span className="text-2xl">🎯</span>
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              🇮🇩 Independence Day Treasure Hunt
+            </h2>
+            <p className="text-gray-200 text-lg mb-6 max-w-2xl mx-auto">
+              Shop Rp 150,000+ and join our special treasure hunt! Scan QR codes, take selfies with decorations, answer quizzes, and win amazing prizes!
+            </p>
+            <button
+              onClick={() => onNavigate?.('treasure-hunt')}
+              className="inline-flex items-center px-8 py-4 bg-[#D4AF37] text-black font-semibold rounded-lg hover:bg-[#B8941F] transition-colors duration-200 text-lg"
+            >
+              <span className="mr-2">🏆</span>
+              Start Your Adventure
+            </button>
           </div>
         </div>
       </section>
